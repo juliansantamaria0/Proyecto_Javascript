@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel el Rincón del Carmen - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#rooms">Habitaciones</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="reservations.html">Reservas</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="historia.html">Historia</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Sección Inicio -->
+        <section id="home" class="home">
+            <video class="cover-video" autoplay muted loop playsinline>
+                <source src="Images/Generated File October 05, 2025 - 3_29PM.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+            <div class="hero-content">
+                <h1>Hotel el Rincón del Carmen</h1>
+                <p>Tu descanso, nuestra prioridad</p>
+                <a href="reservations.html" class="cta-button">Reservar ahora</a>
+            </div>
+        </section>
+        
+        <!-- Sección Habitaciones -->
+        <section id="rooms" class="rooms">
+            <h2>Nuestras Habitaciones</h2>
+            <div id="rooms-gallery" class="rooms-gallery"></div>
+        </section>
+        
+        <!-- Sección Servicios -->
+        <section id="services" class="services">
+            <h2>Servicios</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="Images/wifi.jpg" alt="WiFi Icon">
+                    <p>WiFi de alta velocidad</p>
+                </div>
+                <div class="service-item">
+                    <img src="Images/restaurantIcon.webp" alt="Restaurante Icon">
+                    <p>Restaurante gourmet</p>
+                </div>
+                <div class="service-item">
+                    <img src="Images/Spa.png" alt="Spa Icon">
+                    <p>Spa y zona de relajación</p>
+                </div>
+                <div class="service-item">
+                    <img src="Images/PiscinaIcon.png" alt="Piscina Icon">
+                    <p>Piscina al aire libre</p>
+                </div>
+                <div class="service-item">
+                    <img src="Images/parqueadero.png" alt="Parqueadero Icon">
+                    <p>Parqueadero gratuito</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Hotel el Rincón del Carmen</p>
+    </footer>
+    
+    <script type="module" src="app.js"></script>
+</body>
+</html>
