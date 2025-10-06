@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel el Rincón del Carmen - Reservas</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Habitaciones/rooms.html">Habitaciones</a></li>
+                <li><a href="../servicios/services.html">Servicios</a></li>
+                <li><a href="../reservation/reservations.html">Reservas</a></li>
+                <li><a href="../contactos/contactos.html">Contacto</a></li>
+                <li><a href="../admin/admin.html">Admin</a></li>
+                <li><a href="../historia/historia.html">Historia</a></li>
+                <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="auth">
+            <h2>Autenticación</h2>
+            <form id="registerForm">
+                <h3>Registro</h3>
+                <input type="text" id="idNumber" placeholder="Número de identificación" required>
+                <input type="text" id="fullName" placeholder="Nombre completo" required>
+                <input type="text" id="nationality" placeholder="Nacionalidad" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Teléfono" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+            
+            <form id="loginForm">
+                <h3>Iniciar Sesión</h3>
+                <input type="text" id="loginIdNumber" placeholder="Número de identificación" required>
+                <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </section>
+        
+        <section class="reservations" style="display: none;">
+            <h2>Consulta de Disponibilidad</h2>
+            <form id="availabilityForm">
+                <label>Fecha de Entrada:</label>
+                <input type="date" id="checkIn" required>
+                <label>Fecha de Salida:</label>
+                <input type="date" id="checkOut" required>
+                <label>Número de Personas:</label>
+                <input type="number" id="persons" min="1" required>
+                <button type="submit">Buscar</button>
+            </form>
+            
+            <div id="availableRooms"></div>
+            
+            <h2>Mis Reservas</h2>
+            <div id="myReservations"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Hotel el Rincón del Carmen</p>
+    </footer>
+    
+    <script type="module" src="app.js"></script>
+</body>
+</html>
