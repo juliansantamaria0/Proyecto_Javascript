@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia- Origen, Filosofía y Futuro</title>
-    <meta name="description" content="Descubre la fascinante historia de LuxTime, desde su fundación en Miami hasta su visión de futuro en la alta relojería. Conoce nuestra misión, visión y valores.">
+    <title>Historia - Hotel El Rincón del Carmen</title>
+    <meta name="description" content="Descubre la fascinante historia de Hotel El Rincón del Carmen, desde su fundación hasta su visión de futuro en la hospitalidad boutique. Conoce nuestra misión, visión y valores.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
-<body>
- <header>
+<body class="history-page">
+    <header>
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
@@ -19,14 +19,17 @@
                 <li><a href="../reservation/reservations.html">Reservas</a></li>
                 <li><a href="../contactos/contactos.html">Contacto</a></li>
                 <li><a href="../admin/admin.html">Admin</a></li>
-                <li><a href="../historia/historia.html">Historia</a></li>
+                <li><a href="../historia/historia.html" aria-current="page">Historia</a></li>
                 <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
             </ul>
         </nav>
     </header>
 
- 
     <section class="principal-section" id="inicio" role="banner" aria-labelledby="history-main-title">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="../Images/21b18a07-75d4-4830-9b6a-e97f0b1bcf91.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
         <div class="principal-section-content">
             <h1 id="history-main-title">Nuestra Historia: Un Legado de Hospitalidad</h1>
             <p class="subtitle">El Hotel El Rincón del Carmen nace en el corazón de [ciudad/región], como respuesta a la creciente demanda de un espacio acogedor, auténtico y lleno de encanto. Desde nuestros inicios, nos propusimos crear un lugar donde la tradición, la comodidad y la calidez se unieran para ofrecer experiencias memorables a cada huésped.</p>
@@ -92,7 +95,7 @@
 
     <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
         <h2 class="section-title" id="gallery-title">Galería Histórica</h2>
-        <p class="section-subtitle">Revive los momentos icónicos de LuxTime a través de nuestras imágenes.</p>
+        <p class="section-subtitle">Revive los momentos icónicos de El Rincón del Carmen a través de nuestras imágenes.</p>
         <div class="gallery-grid">
             <figure class="gallery-item gallery-item--large">
                 <img src="../IMG/gallery-image-1.jpg" alt="Apertura del primer hotel boutique, 2010" aria-label="Apertura del primer hotel boutique, 2010">
@@ -152,7 +155,7 @@
 
     <section class="features-section" id="future-projection" aria-labelledby="future-title">
         <h2 class="section-title" id="future-title">Proyección a Futuro: Mirando Adelante</h2>
-        <p class="section-subtitle">Innovando para seguir marcando el tiempo en la alta relojería.</p>
+        <p class="section-subtitle">Innovando para seguir marcando la excelencia en la hospitalidad.</p>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon" aria-hidden="true"><i class="fas fa-gavel"></i></div>
@@ -162,7 +165,7 @@
             <div class="feature-card">
                 <div class="feature-icon" aria-hidden="true"><i class="fas fa-vr-cardboard"></i></div>
                 <h3>Experiencias Digitales Inmersivas</h3>
-                <p>Expandir nuestra presencia digital con reservas online dinámicas y recorridos virtuales inmersivos..</p>
+                <p>Expandir nuestra presencia digital con reservas online dinámicas y recorridos virtuales inmersivos.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon" aria-hidden="true"><i class="fas fa-leaf"></i></div>
@@ -172,8 +175,9 @@
         </div>
     </section>
 
-     <footer>
-        <p>&copy; 2025 Hotel el Rincón del Carmen</p>
+    <footer>
+        <p>&copy; 2025 Hotel El Rincón del Carmen</p>
     </footer>
+        <script type="module" src="../app.js"></script>
 </body>
 </html>

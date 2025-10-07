@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel el Rincón del Carmen - Contacto</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body> 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Habitaciones/rooms.html">Habitaciones</a></li>
+                <li><a href="../servicios/services.html">Servicios</a></li>
+                <li><a href="../reservation/reservations.html">Reservas</a></li>
+                <li><a href="../contactos/contactos.html">Contacto</a></li>
+                <li><a href="../admin/admin.html">Admin</a></li>
+                <li><a href="../historia/historia.html">Historia</a></li>
+                <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contact-container">
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección: Cra 123, el Carmen, Colombia</p>
+                <p><i class="fas fa-phone-alt"></i> Teléfono: +123 456 789</p>
+                <p><i class="fas fa-envelope"></i> Email: info@rincondelcarmen.com</p>
+                <p><i class="fas fa-clock"></i> Horario: Lunes a Viernes: 9 AM - 6 PM</p>
+                <p>¡No dudes en contactarnos para cualquier consulta o reserva!</p>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Envíanos un Mensaje</h2>
+                <form action="#" method="POST">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" name="subject">
+                    
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                    
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+
+            <div class="contact-map">
+                <h2>Nuestra Ubicación</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-74.119763973712!3d40.69740344223377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1547824986406" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Hotel el Rincón del Carmen</p>
+    </footer>
+    
+    <script type="module" src="../app.js"></script>
+</body>
+</html>
