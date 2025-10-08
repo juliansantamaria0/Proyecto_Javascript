@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Hotel el Rincón del Carmen</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>Contacto - Hotel El Rincón del Carmen</title>
+    <!-- Carga de iconos (Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Fuente Inter para un diseño moderno -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../contactos/contactos.css">
+
 </head>
 <body>
     <header>
         <nav>
+   
             <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Habitaciones/rooms.html">Habitaciones</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
                 <li><a href="../servicios/services.html">Servicios</a></li>
                 <li><a href="../reservation/reservations.html">Reservas</a></li>
-                <li><a href="../contactos/contactos.html" class="active">Contacto</a></li>
+                <li><a href="../contactos/contactos.html">Contacto</a></li>
                 <li><a href="../historia/historia.html">Historia</a></li>
                 <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-            </ul>
         </nav>
     </header>
     
     <main>
+        <!-- NOTIFICACIÓN DE ÉXITO -->
+        <div id="notification-box">
+            <i class="fas fa-check-circle"></i> Mensaje enviado con éxito!
+        </div>
+
         <section class="contact-container">
             <div class="contact-info">
                 <h2><i class="fas fa-info-circle"></i> Información de Contacto</h2>
@@ -31,12 +40,13 @@
                 <p><i class="fas fa-phone-alt"></i> Teléfono: <a href="tel:+573184356718">318 435 6718</a></p>
                 <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@rincondelcarmen.com">info@rincondelcarmen.com</a></p>
                 <p><i class="fas fa-clock"></i> Horario: Lunes a Viernes: 9 AM - 6 PM</p>
-                <p>¡No dudes en contactarnos para cualquier consulta o reserva!</p>
+                <p style="margin-top: 20px;">¡No dudes en contactarnos para cualquier consulta o reserva!</p>
             </div>
             
             <div class="contact-form">
                 <h2><i class="fas fa-paper-plane"></i> Envíanos un Mensaje</h2>
-                <form action="#" method="POST">
+                <!-- El formulario ya no tiene el atributo action para ser manejado por JS -->
+                <form id="contactForm">
                     <label for="name"><i class="fas fa-user"></i> Nombre:</label>
                     <input type="text" id="name" name="name" placeholder="Tu nombre" required>
                     
@@ -55,7 +65,7 @@
 
             <div class="contact-map">
                 <h2><i class="fas fa-map-marked-alt"></i> Nuestra Ubicación</h2>
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.964563267981!2d-73.12248608523947!3d7.119349943708302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f9c8c9f7b1b%3A0x4e6e5c7b7c8f2b1a!2sBucaramanga%2C%20Santander%2C%20Colombia!5e0!3m2!1ses!2sus!4v1699391234567" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.964563267981!2d-73.12248608523947!3d7.119349943708302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f9c8c9f7b1b%3A0x4e6e5c7b7c8f2b1a!2sBucaramanga%2C%20Santander%2C%20Colombia!5e0!3m2!1ses!2sus!4v1699391234567" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
     </main>
@@ -63,15 +73,15 @@
     <footer>
         <p>&copy; 2025 Hotel el Rincón del Carmen</p>
         <p>Todos los derechos reservados</p>
-        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
-           <div class="social-links">
-                <a href="https://facebook.com">Facebook</a> |
-                <a href="https://instagram.com">Instagram</a> |
-                <a href="https://twitter.com">Twitter</a>
+        <p>Contactanos: <a href="#">Contacto</a></p>
+        <div class="social-links">
+            <a href="https://facebook.com">Facebook</a> |
+            <a href="https://instagram.com">Instagram</a> |
+            <a href="https://twitter.com">Twitter</a>
+        </div>
         <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
     </footer>
 
-
-
+    <script src="./contactos.js"></script>
 </body>
 </html>
