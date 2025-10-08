@@ -15,134 +15,103 @@
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../Habitaciones/rooms.html">Habitaciones</a></li>
                 <li><a href="../servicios/services.html">Servicios</a></li>
-                <li><a href="../reservation/reservations.html" class="active">Reservas</a></li>
+            <li><a href="../reservation/reservations.html" class="active">Reservas</a></li>
                 <li><a href="../contactos/contactos.html">Contacto</a></li>
-                <li><a href="../admin/admin.html">Admin</a></li>
                 <li><a href="../historia/historia.html">Historia</a></li>
                 <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
             </ul>
         </nav>
     </header>
     
-    <main>
-        <section class="auth-container">
-            <div class="auth-form" id="registerSection">
-                <h3><i class="fas fa-user-plus"></i> Regístrate</h3>
-                <form id="registerForm">
-                    <input type="text" id="idNumber" placeholder="Número de Identificación" required>
-                    <input type="text" id="fullName" placeholder="Nombre Completo" required>
-                    <input type="text" id="nationality" placeholder="Nacionalidad" required>
-                    <input type="email" id="email" placeholder="Email" required>
-                    <input type="tel" id="phone" placeholder="Teléfono" required>
-                    <input type="password" id="password" placeholder="Contraseña" required>
-                    <button type="submit"><i class="fas fa-sign-in-alt"></i> Registrarse</button>
-                    <p id="registerMessage" class="auth-message"></p>
-                </form>
-            </div>
-            
-            <div class="auth-form" id="loginSection">
-                <h3><i class="fas fa-user-check"></i> Inicia Sesión</h3>
-                <form id="loginForm">
-                    <input type="text" id="loginIdNumber" placeholder="Número de Identificación" required>
-                    <input type="password" id="loginPassword" placeholder="Contraseña" required>
-                    <button type="submit"><i class="fas fa-user-lock"></i> Iniciar Sesión</button>
-                    <p id="loginMessage" class="auth-message"></p>
-                </form>
-                <p style="margin-top: 20px; text-align: center;">¿Olvidaste tu contraseña? <a href="#">Recuperar</a></p>
-            </div>
-        </section>
-        
-        <section class="reservations-section" id="userReservationsArea" style="display: none;">
-            <h2><i class="fas fa-calendar-alt"></i> Planifica tu Estancia</h2>
-
-            <div class="availability-search">
-                <h3>Consulta de Disponibilidad</h3>
-                <form id="availabilityForm">
-                    <label for="checkIn"><i class="fas fa-calendar-day"></i> Fecha de Entrada:</label>
-                    <input type="date" id="checkIn" required>
-                    
-                    <label for="checkOut"><i class="fas fa-calendar-alt"></i> Fecha de Salida:</label>
-                    <input type="date" id="checkOut" required>
-                    
-                    <label for="persons"><i class="fas fa-users"></i> Número de Personas:</label>
-                    <input type="number" id="persons" min="1" value="1" required>
-                    
-                    <button type="submit"><i class="fas fa-search"></i> Buscar Habitaciones</button>
-                </form>
-            </div>
-            
-            <div id="availableRooms">
-                <h3><i class="fas fa-bed"></i> Habitaciones Disponibles</h3>
-                <div class="room-card-container">
-                    <div class="room-card">
-                        <img src="https://via.placeholder.com/400x200?text=Habitacion+Doble" alt="Habitación Doble">
-                        <div class="room-card-content">
-                            <h4>Habitación Doble Estándar</h4>
-                            <p><i class="fas fa-users"></i> Capacidad: 2 personas</p>
-                            <p><i class="fas fa-bed"></i> Camas: 1 Cama King o 2 Camas Dobles</p>
-                            <p><i class="fas fa-wifi"></i> Servicios: WiFi, TV, Baño privado</p>
-                            <p class="price">$150 / Noche</p>
-                            <button><i class="fas fa-bookmark"></i> Reservar Ahora</button>
-                        </div>
-                    </div>
-                    <div class="room-card">
-                        <img src="https://via.placeholder.com/400x200?text=Suite+Familiar" alt="Suite Familiar">
-                        <div class="room-card-content">
-                            <h4>Suite Familiar con Vistas</h4>
-                            <p><i class="fas fa-users"></i> Capacidad: 4 personas</p>
-                            <p><i class="fas fa-bed"></i> Camas: 1 Cama King, 2 Camas Sencillas</p>
-                            <p><i class="fas fa-bath"></i> Servicios: WiFi, TV, Minibar, Jacuzzi</p>
-                            <p class="price">$280 / Noche</p>
-                            <button><i class="fas fa-bookmark"></i> Reservar Ahora</button>
-                        </div>
-                    </div>
+    <main class="container mx-auto px-4 md:px-8">
+        <div id="app-container">
+            <section class="auth-container" id="auth-container">
+                <div class="auth-form" id="registerSection">
+                    <h3><i class="fas fa-user-plus"></i> Regístrate</h3>
+                    <form id="registerForm">
+                        <input type="text" id="idNumber" placeholder="Número de Identificación" required>
+                        <input type="text" id="fullName" placeholder="Nombre Completo" required>
+                        <input type="text" id="nationality" placeholder="Nacionalidad" required>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="tel" id="phone" placeholder="Teléfono" required>
+                        <input type="password" id="password" placeholder="Contraseña" required>
+                        <button type="submit"><i class="fas fa-sign-in-alt"></i> Registrarse</button>
+                        <p id="registerMessage" class="auth-message text-red-500"></p>
+                    </form>
                 </div>
-                <p id="noRoomsMessage" style="text-align: center; margin-top: 30px; font-style: italic; display: none;">No hay habitaciones disponibles para las fechas seleccionadas.</p>
-            </div>
+                
+                <div class="auth-form" id="loginSection">
+                    <h3><i class="fas fa-user-check"></i> Inicia Sesión</h3>
+                    <form id="loginForm">
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                        <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                        <button type="submit"><i class="fas fa-user-lock"></i> Iniciar Sesión</button>
+                        <p id="loginMessage" class="auth-message text-red-500"></p>
+                    </form>
+                    <p style="margin-top: 20px; text-align: center;">¿No tienes cuenta? <a href="#" onclick="document.getElementById('registerForm').scrollIntoView({behavior: 'smooth'})" class="text-amber-700 hover:underline">Regístrate</a></p>
+                </div>
+            </section>
             
-            <div id="myReservations">
-                <h3><i class="fas fa-clipboard-list"></i> Mis Reservas Actuales</h3>
-                <ul class="reservation-list">
-                    <li>
-                        <div class="reservation-details">
-                            <strong>Reserva #001 - Habitación Doble Estándar</strong>
-                            <p>Fechas: 01/08/2025 - 05/08/2025 | Estado: Confirmada</p>
-                            <p>Total: $600</p>
+            <section class="reservations-section pt-12" id="userReservationsArea" style="display: none;">
+                <h1 class="text-4xl font-bold text-center mb-4">Bienvenido, <span id="user-welcome-name"></span></h1>
+                <p class="text-center text-stone-600 mb-8"><i class="fas fa-user-circle mr-2"></i> ID de Usuario: <span id="user-id-display" class="font-mono text-sm bg-stone-200 px-2 py-1 rounded"></span></p>
+                
+                <div class="flex justify-center mb-8">
+                    <button id="logout-btn" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-2xl mb-4"><i class="fas fa-calendar-alt text-amber-700 mr-2"></i> Planifica tu Estancia</h2>
+                    <form id="availabilityForm" class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+                        <div>
+                            <label for="checkIn" class="block text-sm font-medium text-stone-700 mb-1">Fecha de Entrada:</label>
+                            <input type="date" id="checkIn" class="w-full p-2 border border-stone-300 rounded-lg" required>
                         </div>
-                        <div class="reservation-actions">
-                            <button class="view-details"><i class="fas fa-info-circle"></i> Detalles</button>
-                            <button><i class="fas fa-times-circle"></i> Cancelar</button>
+                        <div>
+                            <label for="checkOut" class="block text-sm font-medium text-stone-700 mb-1">Fecha de Salida:</label>
+                            <input type="date" id="checkOut" class="w-full p-2 border border-stone-300 rounded-lg" required>
                         </div>
-                    </li>
-                    <li>
-                        <div class="reservation-details">
-                            <strong>Reserva #002 - Suite Familiar</strong>
-                            <p>Fechas: 10/09/2025 - 12/09/2025 | Estado: Pendiente</p>
-                            <p>Total: $560</p>
+                        <div>
+                            <label for="persons" class="block text-sm font-medium text-stone-700 mb-1">Huéspedes:</label>
+                            <input type="number" id="persons" min="1" value="1" class="w-full p-2 border border-stone-300 rounded-lg" required>
                         </div>
-                        <div class="reservation-actions">
-                            <button class="view-details"><i class="fas fa-info-circle"></i> Detalles</button>
-                            <button><i class="fas fa-times-circle"></i> Cancelar</button>
-                        </div>
-                    </li>
-                </ul>
-                <p id="noMyReservationsMessage" style="text-align: center; margin-top: 30px; font-style: italic; display: none;">No tienes reservas activas.</p>
-            </div>
-        </section>
+                        <button type="submit" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 rounded-lg transition"><i class="fas fa-search"></i> Buscar Habitaciones</button>
+                    </form>
+                </div>
+                
+                <div id="availableRooms">
+                    <h3 class="text-2xl mb-4"><i class="fas fa-bed text-amber-700 mr-2"></i> Habitaciones Disponibles</h3>
+                    <div class="room-card-container" id="room-results-container">
+                        <!-- Las tarjetas de habitaciones se inyectarán aquí -->
+                    </div>
+                    <p id="noRoomsMessage" class="text-center text-stone-500 p-8 bg-white rounded-xl shadow-lg mt-8" style="display: none;">No hay habitaciones disponibles para las fechas seleccionadas.</p>
+                </div>
+                
+                <div id="myReservations" class="mt-12">
+                    <h3 class="text-2xl mb-4"><i class="fas fa-clipboard-list text-amber-700 mr-2"></i> Mis Reservas Actuales</h3>
+                    <ul class="reservation-list" id="reservation-list-container">
+                        <!-- Las reservas del usuario se inyectarán aquí -->
+                    </ul>
+                    <p id="noMyReservationsMessage" class="text-center text-stone-500 p-4 bg-white rounded-xl shadow-lg mt-8" style="display: none;">No tienes reservas activas.</p>
+                </div>
+            </section>
+        </div>
     </main>
     
     <footer>
         <p>&copy; 2025 Hotel el Rincón del Carmen</p>
         <p>Todos los derechos reservados</p>
-        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
-         <div class="social-links">
-            <a href="https://facebook.com">Facebook</a> |
-            <a href="https://instagram.com">Instagram</a> |
-            <a href="https://twitter.com">Twitter</a>
+        <div class="social-links mt-2">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a>
         </div>
-        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
+        <p class="mt-2">Desarrollado por: <a href="https://github.com/juliansantamaria0" target="_blank">juliansantamaria</a></p>
     </footer>
     
-    <script type="module" src="../app.js"></script>
+    <div id="custom-alert" class="custom-alert hidden translate-x-full opacity-0">
+        <p id="custom-alert-message"></p>
+    </div>
+    <script src="../reservation/reservations.js"></script>
 </body>
 </html>

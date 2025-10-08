@@ -19,7 +19,6 @@
                     <li><a href="../servicios/services.html">Servicios</a></li>
                     <li><a href="../reservation/reservations.html">Reservas</a></li>
                     <li><a href="../contactos/contactos.html">Contacto</a></li>
-                    <li><a href="../admin/admin.html">Admin</a></li>
                     <li><a href="../historia/historia.html">Historia</a></li>
                     <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
                 </ul>
@@ -70,10 +69,36 @@
             </div>
         </section>
 
-        <section class="cta-section" aria-labelledby="cta-title">
+       <section class="cta-section" aria-labelledby="cta-title">
             <h3 id="cta-title">Reserva tu Estancia</h3>
-            <p>Vive la ciudad desde tu habitación. Reserva con guía de atracciones locales.</p>
+            <p>Ideal para un retiro de relajación. Reserva con sesión de spa incluida.</p>
             <form class="quick-reserve" aria-label="Formulario rápido de reserva">
                 <label for="checkin">Fecha de entrada:</label>
-                <input type="date" id="check
+                <input type="date" id="checkin" name="checkin" required>
+                <label for="checkout">Fecha de salida:</label>
+                <input type="date" id="checkout" name="checkout" required>
+                <label for="guests">Número de huéspedes:</label>
+                <select id="guests" name="guests">
+                    <option value="1">1 adulto</option>
+                    <option value="2">2 adultos</option>
+                </select>
+                <button type="submit" class="btn-reserve">Solicitar Reserva</button>
+            </form>
+            <a href="../reservation/reservations.html" class="btn-full-reserve">Reservar Completa</a>
+        </section>
+
+    <footer>
+        <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados</p>
+        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
+            <div class="social-links">
+                <a href="https://facebook.com">Facebook</a> |
+                <a href="https://instagram.com">Instagram</a> |
+                <a href="https://twitter.com">Twitter</a>
+        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
+    </footer>
+
+
+</body>
+</html>
+
                 
