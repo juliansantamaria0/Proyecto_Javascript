@@ -3,22 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitaciones - Hotel el Rincón del Carmen</title>
+    <title>Habitación Estándar - Hotel El Rincón del Carmen</title>
+    <meta name="description" content="Habitación Estándar cómoda y asequible en el Hotel El Rincón del Carmen: ideal para familias o viajes de placer por USD $150/noche. Reserva hoy.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Habitaciones/habitaciones.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Habitaciones/rooms.html">Habitaciones</a></li>
-                <li><a href="../servicios/services.html">Servicios</a></li>
-                <li><a href="../reservation/reservations.html">Reservas</a></li>
-                <li><a href="../contactos/contactos.html">Contacto</a></li>
-                <li><a href="../admin/admin.html">Admin</a></li>
-                <li><a href="../historia/historia.html">Historia</a></li>
-                <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-            </ul>
-        </nav>
-    </header>
+     <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
+                    <li><a href="../servicios/services.html">Servicios</a></li>
+                    <li><a href="../reservation/reservations.html">Reservas</a></li>
+                    <li><a href="../contactos/contactos.html">Contacto</a></li>
+                    <li><a href="../admin/admin.html">Admin</a></li>
+                    <li><a href="../historia/historia.html">Historia</a></li>
+                    <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero-section room-hero" aria-labelledby="room-hero-title">
+            <div class="hero-content">
+                <h2 id="room-hero-title">Habitación Estándar</h2>
+                <p class="room-rating">★★★★☆ (4.5/5) - USD $150/noche</p>
+                <span class="availability disponible" aria-label="Esta habitación está disponible">Disponible</span>
+            </div>
+        </section>
+
+        <section class="room-content" aria-label="Detalles de la Habitación Estándar">
+            <div class="room-gallery">
+                <img src="../images/estandar-1.jpg" alt="Habitación Estándar con cama queen y decoración acogedora" loading="lazy">
+                <img src="../images/estandar-2.jpg" alt="Baño básico en la Habitación Estándar con ducha y toallas frescas" loading="lazy">
+                <img src="../images/estandar-3.jpg" alt="Área de descanso en la Habitación Estándar cerca de la piscina" loading="lazy">
+            </div>
+
+            <div class="room-description">
+                <h3>Descripción</h3>
+                <p>Nuestra Habitación Estándar ofrece un equilibrio perfecto entre comodidad y precio accesible. Con 30 m² de espacio, incluye una cama queen size, baño privado y acceso directo a las áreas comunes del hotel. Ideal para familias o viajeros que buscan una base cómoda para explorar la zona.</p>
+
+                <h3>Amenidades</h3>
+                <ul class="amenities-list">
+                    <li>Cama queen size</li>
+                    <li>Baño privado con ducha</li>
+                    <li>Acceso a piscina y jardín</li>
+                    <li>Wi-Fi gratis</li>
+                    <li>Aire acondicionado</li>
+                    <li>TV con canales locales</li>
+                    <li>Desayuno incluido</li>
+                    <li>Estacionamiento gratuito</li>
+                </ul>
+
+                <h3>Capacidad y Precio</h3>
+                <p>Máximo 2 adultos + 1 niño. Precio base: USD $150 por noche. Ofertas para reservas anticipadas.</p>
+            </div>
+        </section>
+
+        <section class="room-location">
+            <h3>Ubicación en el Hotel</h3>
+            <p>Ubicada en el ala este, cerca de la entrada principal y la piscina, para una estancia conveniente.</p>
+            <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
+              <p> <img src="../Images/mapainteractivo.323Z.png" alt="Vista general de la Habitación Deluxe con cama king size y decoración elegante" loading="lazy"></p>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
+            <h3 id="cta-title">Reserva tu Estancia</h3>
+            <p>Disponible ahora. Reserva fácilmente con nuestro formulario rápido.</p>
+            <form class="quick-reserve" aria-label="Formulario rápido de reserva">
+                <label for="checkin">Fecha de entrada:</label>
+                <input type="date" id="checkin" name="checkin" required>
+                <label for="checkout">Fecha de salida:</label>
+                <input type="date" id="checkout" name="checkout" required>
+                <label for="guests">Número de huéspedes:</label>
+                <select id="guests" name="guests">
+                    <option value="1">1 adulto</option>
+                    <option value="2">2 adultos + 1 niño</option>
+                </select>
+                <button type="submit" class="btn-reserve">Solicitar Reserva</button>
+            </form>
+            <a href="../reservation/reservations.html" class="btn-full-reserve">Reservar Completa</a>
+        </section>
+
+    <footer>
+        <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados</p>
+        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
+           <div class="social-links">
+                <a href="https://facebook.com">Facebook</a> |
+                <a href="https://instagram.com">Instagram</a> |
+                <a href="https://twitter.com">Twitter</a>
+        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

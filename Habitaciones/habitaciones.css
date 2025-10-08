@@ -1,0 +1,347 @@
+/* habitaciones.css - Estilos para páginas de detalles de habitaciones (excluyendo header y footer) */
+/* Aplicado a: Habitacion.Deluxe.html, Habitacion.Estandar.html, Suite.Ejecutiva.html, etc. */
+/* No aplica a rooms.html. Usa flexbox/grid para responsividad. Colores: beige claro (#f8f5f0), verde hotel (#4a7c59), texto oscuro (#333). */
+
+/* Reset y variables globales para secciones de habitaciones */
+:root {
+    --primary-color: #4a7c59; /* Verde hotel para acentos */
+    --secondary-color: #f8f5f0; /* Beige claro para fondos */
+    --text-color: #333; /* Texto principal */
+    --accent-color: #e8e3d9; /* Beige más claro para highlights */
+    --border-radius: 8px;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.room-detail,
+.room-hero,
+.room-content,
+.room-location,
+.cta-section {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section (room-hero) */
+.hero-section.room-hero {
+    background: linear-gradient(to right, var(--primary-color), #6b9b7a);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section.room-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/hero-bg.jpg') center/cover; /* Placeholder para fondo de imagen */
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-section.room-hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.room-rating {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.availability {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.availability.disponible {
+    background: #28a745;
+    color: white;
+}
+
+.availability.reservada {
+    background: #dc3545;
+    color: white;
+}
+
+/* Room Content (room-content) */
+.room-content {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.room-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.room-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.room-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.room-description h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.room-description p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.amenities-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.amenities-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1rem;
+}
+
+.amenities-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Room Location */
+.room-location {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.room-location h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.room-location p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.map-placeholder {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--primary-color);
+    font-style: italic;
+    color: #666;
+}
+
+/* CTA Section (reserva) */
+.cta-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: var(--accent-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.cta-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.quick-reserve {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: end;
+}
+
+.quick-reserve label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--primary-color);
+}
+
+.quick-reserve input,
+.quick-reserve select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+    background: white;
+}
+
+.quick-reserve input:focus,
+.quick-reserve select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 124, 89, 0.2);
+}
+
+.btn-reserve {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    grid-column: 1 / -1;
+}
+
+.btn-reserve:hover {
+    background: #3a6549;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.btn-full-reserve {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-full-reserve:hover {
+    background: #3a6549;
+    transform: translateY(-2px);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero-section.room-hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero-section.room-hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .room-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+
+    .room-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .room-gallery img {
+        height: 250px;
+    }
+
+    .quick-reserve {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+        padding: 1.5rem;
+        margin: 2rem 1rem;
+    }
+
+    .room-location {
+        padding: 1.5rem;
+        margin: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section.room-hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .room-description h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn-reserve,
+    .btn-full-reserve {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/* Estilos adicionales para mejorar legibilidad */
+.room-content,
+.room-location,
+.cta-section {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}

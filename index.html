@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel el Rincón del Carmen - Inicio</title>
     <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="inicio/inicio.css">
 </head>
 <body>
     <header>
         <nav>
+    
             <ul>
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="Habitaciones/rooms.html">Habitaciones</a></li>
@@ -17,63 +19,90 @@
                 <li><a href="contactos/contactos.html">Contacto</a></li>
                 <li><a href="admin/admin.html">Admin</a></li>
                 <li><a href="historia/historia.html">Historia</a></li>
-                <li><a href="Patrocinadores/patrocinadores.html">patrocinadores</a></li>
+                <li><a href="Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
             </ul>
         </nav>
     </header>
-    
-  
-        <!-- Sección Inicio -->
-        <section id="home" class="home">
-            <video class="cover-video" autoplay muted loop playsinline>
-                <source src="Images/Generated File October 05, 2025 - 3_29PM.mp4" type="video/mp4">
-            </video>
-            <div class="hero-content">
-                <h1>Hotel el Rincón del Carmen</h1>
-                <p>Tu descanso, nuestra prioridad</p>
-                <a href="reservation/reservations.html" class="cta-button">Reservar ahora</a>
+
+    <!-- Sección Inicio -->
+    <section id="home" class="home">
+        <video class="cover-video" autoplay muted loop playsinline>
+            <source src="Images/Generated File October 05, 2025 - 3_29PM.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Bienvenidos a Hotel el Rincón del Carmen</h1>
+            <p>Tu descanso, nuestra prioridad. Descubre la elegancia y comodidad en el corazón de la ciudad.</p>
+            <a href="reservation/reservations.html" class="cta-button">Reservar ahora</a>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>El Hotel el Rincón del Carmen combina la elegancia tradicional con comodidades modernas. Ubicado en un entorno privilegiado, ofrecemos una experiencia única para viajeros que buscan confort y hospitalidad de primera clase. Nuestra misión es hacer que cada estadía sea inolvidable.</p>
+    </section>
+
+    <!-- Sección Habitaciones -->
+    <section id="rooms" class="rooms">
+        <h2>Nuestras Habitaciones</h2>
+        <p>Descubre nuestras espaciosas habitaciones diseñadas para tu confort y relajación.</p>
+        <div id="rooms-gallery" class="rooms-gallery"></div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="services" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="Images/wifi.jpg" alt="WiFi Icon">
+                <p>WiFi de alta velocidad</p>
             </div>
-        </section>
-        
-        <!-- Sección Habitaciones -->
-        <section id="rooms" class="rooms">
-            <h2>Nuestras Habitaciones</h2>
-            <div id="rooms-gallery" class="rooms-gallery"></div>
-        </section>
-        
-        <!-- Sección Servicios -->
-        <section id="services" class="services">
-            <h2>Servicios</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <img src="Images/wifi.jpg" alt="WiFi Icon">
-                    <p>WiFi de alta velocidad</p>
-                </div>
-                <div class="service-item">
-                    <img src="Images/restaurantIcon.webp" alt="Restaurante Icon">
-                    <p>Restaurante gourmet</p>
-                </div>
-                <div class="service-item">
-                    <img src="Images/Spa.png" alt="Spa Icon">
-                    <p>Spa y zona de relajación</p>
-                </div>
-                <div class="service-item">
-                    <img src="Images/PiscinaIcon.png" alt="Piscina Icon">
-                    <p>Piscina al aire libre</p>
-                </div>
-                <div class="service-item">
-                    <img src="Images/parqueadero.png" alt="Parqueadero Icon">
-                    <p>Parqueadero gratuito</p>
-                </div>
+            <div class="service-item">
+                <img src="Images/restaurantIcon.webp" alt="Restaurante Icon">
+                <p>Restaurante gourmet</p>
+            </div>
+            <div class="service-item">
+                <img src="Images/Spa.png" alt="Spa Icon">
+                <p>Spa y zona de relajación</p>
+            </div>
+            <div class="service-item">
+                <img src="Images/PiscinaIcon.png" alt="Piscina Icon">
+                <p>Piscina al aire libre</p>
+            </div>
+            <div class="service-item">
+                <img src="Images/parqueadero.png" alt="Parqueadero Icon">
+                <p>Parqueadero gratuito</p>
             </div>
         </section>
 
-    
+    <!-- Sección Testimonios -->
+    <section id="testimonials" class="testimonials">
+        <h2>Lo que dicen nuestros huéspedes</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-item">
+                <p>"Una experiencia inolvidable. El personal es increíble y las instalaciones son de primera."</p>
+                <p><strong>- María G.</strong></p>
+            </div>
+            <div class="testimonial-item">
+                <p>"El mejor hotel en el que me he hospedado. La comida del restaurante es exquisita."</p>
+                <p><strong>- Juan P.</strong></p>
+            </div>
+            <div class="testimonial-item">
+                <p>"Perfecto para un viaje de negocios o placer. ¡Volveré pronto!"</p>
+                <p><strong>- Ana R.</strong></p>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Hotel el Rincón del Carmen 
-        </p>Todos los derechos reservados</p>
-        <p>Contactanos:<a href="contactos/contactos.html"> Contacto</a></p>
-          <p>Desarrollado por<a href="https://github.com/juliansantamaria0"> juliansantamaria</a></p>
+        <p>&copy; 2025 Hotel el Rincón del Carmen. Todos los derechos reservados.</p>
+        <p>Contáctanos: <a href="contactos/contactos.html">Contacto</a></p>
+        <div class="social-links">
+            <a href="https://facebook.com">Facebook</a> |
+            <a href="https://instagram.com">Instagram</a> |
+            <a href="https://twitter.com">Twitter</a>
+        </div>
+        <p>Desarrollado por <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
     </footer>
 
     <script type="module" src="app.js"></script>

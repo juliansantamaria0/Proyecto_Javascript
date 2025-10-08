@@ -3,22 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitaciones - Hotel el Rincón del Carmen </title>
+    <title>Suite Presidencial - Hotel El Rincón del Carmen</title>
+    <meta name="description" content="Suite Presidencial de lujo supremo en el Hotel El Rincón del Carmen: exclusividad total por USD $500/noche. Reserva ya.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Habitaciones/habitaciones.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Habitaciones/rooms.html">Habitaciones</a></li>
-                <li><a href="../servicios/services.html">Servicios</a></li>
-                <li><a href="../reservation/reservations.html">Reservas</a></li>
-                <li><a href="../contactos/contactos.html">Contacto</a></li>
-                <li><a href="../admin/admin.html">Admin</a></li>
-                <li><a href="../historia/historia.html">Historia</a></li>
-                <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-            </ul>
-        </nav>
-    </header>
+     <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
+                    <li><a href="../servicios/services.html">Servicios</a></li>
+                    <li><a href="../reservation/reservations.html">Reservas</a></li>
+                    <li><a href="../contactos/contactos.html">Contacto</a></li>
+                    <li><a href="../admin/admin.html">Admin</a></li>
+                    <li><a href="../historia/historia.html">Historia</a></li>
+                    <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero-section room-hero" aria-labelledby="room-hero-title">
+            <div class="hero-content">
+                <h2 id="room-hero-title">Suite Presidencial</h2>
+                <p class="room-rating">★★★★★ (5.0/5) - USD $500/noche</p>
+                <span class="availability reservada" aria-label="Esta habitación está actualmente reservada">Reservada</span>
+            </div>
+        </section>
+
+        <section class="room-content" aria-label="Detalles de la Suite Presidencial">
+            <div class="room-gallery">
+                <img src="../images/presidencial-1.jpg" alt="Sala principal de la Suite Presidencial con muebles de lujo y chandelier" loading="lazy">
+                <img src="../images/presidencial-2.jpg" alt="Dormitorio ejecutivo de la Suite Presidencial con cama king y escritorio" loading="lazy">
+                <img src="../images/presidencial-3.jpg" alt="Jacuzzi privado y terraza en la Suite Presidencial con vistas panorámicas" loading="lazy">
+            </div>
+
+            <div class="room-description">
+                <h3>Descripción</h3>
+                <p>La Suite Presidencial es la joya de la corona de nuestro hotel, con 80 m² de espacio exclusivo diseñado para dignatarios, celebridades y viajeros de élite. Incluye sala de conferencias privada, jacuzzi al aire libre, servicio de mayordomo personal y acceso ilimitado a todas las amenidades VIP del hotel.</p>
+
+                <h3>Amenidades</h3>
+                <ul class="amenities-list">
+                    <li>3 habitaciones (dormitorio principal + sala + estudio)</li>
+                    <li>Jacuzzi privado y sauna personal</li>
+                    <li>Terraza panorámica con barbacoa</li>
+                    <li>Wi-Fi dedicado y sistema de entretenimiento 8K</li>
+                    <li>Mini-bar premium con champán y caviar</li>
+                    <li>TV de 75" con sala de cine privada</li>
+                    <li>Mayordomo 24h y chef personal</li>
+                    <li>Desayuno ejecutivo y traslados en limusina</li>
+                </ul>
+
+                <h3>Capacidad y Precio</h3>
+                <p>Máximo 4 adultos o 2 adultos + 2 niños. Precio base: USD $500 por noche. Incluye todos los servicios VIP y seguridad privada bajo solicitud.</p>
+            </div>
+        </section>
+
+        <section class="room-location">
+            <h3>Ubicación en el Hotel</h3>
+            <p>En el penthouse del hotel, con vistas 360° a la ciudad y el mar, y ascensor privado para máxima discreción y exclusividad.</p>
+            <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
+              <p> <img src="../Images/mapainteractivo.323Z.png" alt="Vista general de la Habitación Deluxe con cama king size y decoración elegante" loading="lazy"></p>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
+            <h3 id="cta-title">Reserva tu Estancia</h3>
+            <p>Exclusividad absoluta. Contacta para verificar disponibilidad y personalización.</p>
+            <form class="quick-reserve" aria-label="Formulario rápido de reserva">
+                <label for="checkin">Fecha de entrada:</label>
+                <input type="date" id="checkin" name="checkin" required>
+                <label for="checkout">Fecha de salida:</label>
+                <input type="date" id="checkout" name="checkout" required>
+                <label for="guests">Número de huéspedes:</label>
+                <select id="guests" name="guests">
+                    <option value="1">1 adulto</option>
+                    <option value="2">2 adultos</option>
+                    <option value="3">3 adultos</option>
+                    <option value="4">4 adultos o 2 adultos + 2 niños</option>
+                </select>
+                <button type="submit" class="btn-reserve">Solicitar Reserva</button>
+            </form>
+            <a href="../reservation/reservations.html" class="btn-full-reserve">Reservar Completa</a>
+        </section>
+
+    <footer>
+        <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados</p>
+        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
+         <div class="social-links">
+            <a href="https://facebook.com">Facebook</a> |
+            <a href="https://instagram.com">Instagram</a> |
+            <a href="https://twitter.com">Twitter</a>
+        </div>
+        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

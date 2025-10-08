@@ -3,22 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitaciones - Hotel el Rincón del Carmen </title>
+    <title>Habitación Spa - Hotel El Rincón del Carmen</title>
+    <meta name="description" content="Habitación Spa relajante en el Hotel El Rincón del Carmen: acceso directo al spa y tratamientos incluidos por USD $300/noche. Reserva ahora.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Habitaciones/habitaciones.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Habitaciones/rooms.html">Habitaciones</a></li>
-                <li><a href="../servicios/services.html">Servicios</a></li>
-                <li><a href="../reservation/reservations.html">Reservas</a></li>
-                <li><a href="../contactos/contactos.html">Contacto</a></li>
-                <li><a href="../admin/admin.html">Admin</a></li>
-                <li><a href="../historia/historia.html">Historia</a></li>
-                <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-            </ul>
-        </nav>
-    </header>
+     <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
+                    <li><a href="../servicios/services.html">Servicios</a></li>
+                    <li><a href="../reservation/reservations.html">Reservas</a></li>
+                    <li><a href="../contactos/contactos.html">Contacto</a></li>
+                    <li><a href="../admin/admin.html">Admin</a></li>
+                    <li><a href="../historia/historia.html">Historia</a></li>
+                    <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero-section room-hero" aria-labelledby="room-hero-title">
+            <div class="hero-content">
+                <h2 id="room-hero-title">Habitación Spa</h2>
+                <p class="room-rating">★★★★★ (4.9/5) - USD $300/noche</p>
+                <span class="availability disponible" aria-label="Esta habitación está disponible">Disponible</span>
+            </div>
+        </section>
+
+        <section class="room-content" aria-label="Detalles de la Habitación Spa">
+            <div class="room-gallery">
+                <img src="../images/spa-1.jpg" alt="Habitación Spa con baño de vapor privado y decoración zen" loading="lazy">
+                <img src="../images/spa-2.jpg" alt="Acceso directo al spa desde la Habitación Spa con toallas y aceites esenciales" loading="lazy">
+                <img src="../images/spa-3.jpg" alt="Área de relajación en la Habitación Spa con vistas al jardín zen" loading="lazy">
+            </div>
+
+            <div class="room-description">
+                <h3>Descripción</h3>
+                <p>La Habitación Spa es un santuario de relajación total, con 50 m² diseñados para el bienestar. Incluye acceso directo al spa del hotel, baño con vapor y aromaterapia, y un ambiente sereno perfecto para desconectar del estrés diario.</p>
+
+                <h3>Amenidades</h3>
+                <ul class="amenities-list">
+                    <li>Cama king size con sábanas terapéuticas</li>
+                    <li>Baño con vapor y ducha de lluvia</li>
+                    <li>Acceso ilimitado al spa (masaje de bienvenida incluido)</li>
+                    <li>Wi-Fi gratis y altavoces para música relajante</li>
+                    <li>Aire acondicionado, minibar con infusiones</li>
+                    <li>TV con canales de meditación</li>
+                    <li>Servicio de habitaciones con menús saludables</li>
+                    <li>Desayuno detox incluido</li>
+                </ul>
+
+                <h3>Capacidad y Precio</h3>
+                <p>Máximo 2 adultos. Precio base: USD $300 por noche. Paquetes spa con descuentos en tratamientos adicionales.</p>
+            </div>
+        </section>
+
+        <section class="room-location">
+            <h3>Ubicación en el Hotel</h3>
+            <p>Adyacente al spa principal, en el ala oeste, para un acceso inmediato a las instalaciones de bienestar.</p>
+            <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
+                 <p> <img src="../Images/mapainteractivo.323Z.png" alt="Vista general de la Habitación Deluxe con cama king size y decoración elegante" loading="lazy"></p>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
+            <h3 id="cta-title">Reserva tu Estancia</h3>
+            <p>Ideal para un retiro de relajación. Reserva con sesión de spa incluida.</p>
+            <form class="quick-reserve" aria-label="Formulario rápido de reserva">
+                <label for="checkin">Fecha de entrada:</label>
+                <input type="date" id="checkin" name="checkin" required>
+                <label for="checkout">Fecha de salida:</label>
+                <input type="date" id="checkout" name="checkout" required>
+                <label for="guests">Número de huéspedes:</label>
+                <select id="guests" name="guests">
+                    <option value="1">1 adulto</option>
+                    <option value="2">2 adultos</option>
+                </select>
+                <button type="submit" class="btn-reserve">Solicitar Reserva</button>
+            </form>
+            <a href="../reservation/reservations.html" class="btn-full-reserve">Reservar Completa</a>
+        </section>
+
+    <footer>
+        <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados</p>
+        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
+            <div class="social-links">
+                <a href="https://facebook.com">Facebook</a> |
+                <a href="https://instagram.com">Instagram</a> |
+                <a href="https://twitter.com">Twitter</a>
+        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

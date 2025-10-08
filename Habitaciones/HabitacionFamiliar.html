@@ -3,22 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitaciones - Hotel el Rincón del Carmen</title>
+    <title>Habitación Familiar - Hotel El Rincón del Carmen</title>
+    <meta name="description" content="Habitación Familiar espaciosa en el Hotel El Rincón del Carmen: perfecta para familias con niños por USD $200/noche. Reserva ahora.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Habitaciones/habitaciones.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Habitaciones/rooms.html">Habitaciones</a></li>
-                <li><a href="../servicios/services.html">Servicios</a></li>
-                <li><a href="../reservation/reservations.html">Reservas</a></li>
-                <li><a href="../contactos/contactos.html">Contacto</a></li>
-                <li><a href="../admin/admin.html">Admin</a></li>
-                <li><a href="../historia/historia.html">Historia</a></li>
-                <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-            </ul>
-        </nav>
-    </header>
+     <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
+                    <li><a href="../servicios/services.html">Servicios</a></li>
+                    <li><a href="../reservation/reservations.html">Reservas</a></li>
+                    <li><a href="../contactos/contactos.html">Contacto</a></li>
+                    <li><a href="../admin/admin.html">Admin</a></li>
+                    <li><a href="../historia/historia.html">Historia</a></li>
+                    <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero-section room-hero" aria-labelledby="room-hero-title">
+            <div class="hero-content">
+                <h2 id="room-hero-title">Habitación Familiar</h2>
+                <p class="room-rating">★★★★☆ (4.6/5) - USD $200/noche</p>
+                <span class="availability disponible" aria-label="Esta habitación está disponible">Disponible</span>
+            </div>
+        </section>
+
+        <section class="room-content" aria-label="Detalles de la Habitación Familiar">
+            <div class="room-gallery">
+                <img src="../images/familiar-1.jpg" alt="Habitación Familiar con dos camas queen y área de juegos para niños" loading="lazy">
+                <img src="../images/familiar-2.jpg" alt="Baño familiar en la habitación con accesorios para niños" loading="lazy">
+                <img src="../images/familiar-3.jpg" alt="Vista de la Habitación Familiar conectada al jardín infantil del hotel" loading="lazy">
+            </div>
+
+            <div class="room-description">
+                <h3>Descripción</h3>
+                <p>La Habitación Familiar está diseñada pensando en las necesidades de las familias con niños. Con 40 m² de espacio, ofrece dos camas queen size, un área de juegos segura y acceso directo a las zonas infantiles del hotel. Ideal para vacaciones en familia, con comodidades que hacen el viaje más fácil y divertido.</p>
+
+                <h3>Amenidades</h3>
+                <ul class="amenities-list">
+                    <li>2 camas queen size o 1 king + camas extras</li>
+                    <li>Baño privado con accesorios para niños</li>
+                    <li>Área de juegos y cunas disponibles</li>
+                    <li>Wi-Fi gratis</li>
+                    <li>Aire acondicionado y TV familiar</li>
+                    <li>Acceso a piscina infantil</li>
+                    <li>Desayuno buffet con opciones para niños</li>
+                    <li>Estacionamiento familiar</li>
+                </ul>
+
+                <h3>Capacidad y Precio</h3>
+                <p>Máximo 4 personas (2 adultos + 2 niños). Precio base: USD $200 por noche. Paquetes familiares con descuentos en actividades incluidas.</p>
+            </div>
+        </section>
+
+        <section class="room-location">
+            <h3>Ubicación en el Hotel</h3>
+            <p>Ubicada en el ala sur, cerca del jardín infantil y la piscina familiar, para una estancia segura y divertida.</p>
+            <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
+                 <p> <img src="../Images/mapainteractivo.323Z.png" alt="Vista general de la Habitación Deluxe con cama king size y decoración elegante" loading="lazy"></p>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
+            <h3 id="cta-title">Reserva tu Estancia</h3>
+            <p>Perfecta para familias. Reserva con opciones especiales para niños.</p>
+            <form class="quick-reserve" aria-label="Formulario rápido de reserva">
+                <label for="checkin">Fecha de entrada:</label>
+                <input type="date" id="checkin" name="checkin" required>
+                <label for="checkout">Fecha de salida:</label>
+                <input type="date" id="checkout" name="checkout" required>
+                <label for="guests">Número de huéspedes:</label>
+                <select id="guests" name="guests">
+                    <option value="2">2 adultos</option>
+                    <option value="4">2 adultos + 2 niños</option>
+                </select>
+                <button type="submit" class="btn-reserve">Solicitar Reserva</button>
+            </form>
+            <a href="../reservation/reservations.html" class="btn-full-reserve">Reservar Completa</a>
+        </section>
+
+    <footer>
+        <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados</p>
+        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
+           <div class="social-links">
+                <a href="https://facebook.com">Facebook</a> |
+                <a href="https://instagram.com">Instagram</a> |
+                <a href="https://twitter.com">Twitter</a>
+        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -3,22 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitaciones - Hotel el Rincón del Carmen</title>
+    <title>Habitación Deluxe - Hotel El Rincón del Carmen</title>
+    <meta name="description" content="Descubre la Habitación Deluxe en el Hotel El Rincón del Carmen: lujo, comodidad y vistas panorámicas por USD $250/noche. Reserva ahora.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Habitaciones/habitaciones.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Habitaciones/rooms.html">Habitaciones</a></li>
-                <li><a href="../servicios/services.html">Servicios</a></li>
-                <li><a href="../reservation/reservations.html">Reservas</a></li>
-                <li><a href="../contactos/contactos.html">Contacto</a></li>
-                <li><a href="../admin/admin.html">Admin</a></li>
-                <li><a href="../historia/historia.html">Historia</a></li>
-                <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-            </ul>
-        </nav>
-    </header>
+     <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
+                    <li><a href="../servicios/services.html">Servicios</a></li>
+                    <li><a href="../reservation/reservations.html">Reservas</a></li>
+                    <li><a href="../contactos/contactos.html">Contacto</a></li>
+                    <li><a href="../admin/admin.html">Admin</a></li>
+                    <li><a href="../historia/historia.html">Historia</a></li>
+                    <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero-section room-hero" aria-labelledby="room-hero-title">
+            <div class="hero-content">
+                <h2 id="room-hero-title">Habitación Deluxe</h2>
+                <p class="room-rating">★★★★★ (4.9/5) - USD $250/noche</p>
+                <span class="availability reservada" aria-label="Esta habitación está actualmente reservada">Reservada</span>
+            </div>
+        </section>
+
+        <section class="room-content" aria-label="Detalles de la Habitación Deluxe">
+            <div class="room-gallery">
+                <img src="../images/deluxe-1.jpg" alt="Vista general de la Habitación Deluxe con cama king size y decoración elegante" loading="lazy">
+                <img src="../images/deluxe-2.jpg" alt="Baño de lujo en la Habitación Deluxe con jacuzzi y amenities premium" loading="lazy">
+                <img src="../images/deluxe-3.jpg" alt="Vista panorámica desde la ventana de la Habitación Deluxe al jardín del hotel" loading="lazy">
+            </div>
+
+            <div class="room-description">
+                <h3>Descripción</h3>
+                <p>Indulge en el máximo lujo con nuestra Habitación Deluxe, diseñada para viajeros exigentes que buscan comodidad y elegancia. Esta habitación de 45 m² cuenta con una cama king size con sábanas de algodón egipcio, baño privado con jacuzzi y ducha de lluvia, y vistas impresionantes al jardín tropical. Perfecta para escapadas románticas o estancias de negocios relajadas.</p>
+
+                <h3>Amenidades</h3>
+                <ul class="amenities-list">
+                    <li>Cama king size con almohadas premium</li>
+                    <li>Baño privado con jacuzzi y productos de baño de lujo</li>
+                    <li>Vista al jardín o piscina</li>
+                    <li>Wi-Fi de alta velocidad gratis</li>
+                    <li>Aire acondicionado y minibar surtido</li>
+                    <li>TV de pantalla plana con canales internacionales</li>
+                    <li>Servicio de habitaciones 24 horas</li>
+                    <li>Desayuno buffet incluido</li>
+                </ul>
+
+                <h3>Capacidad y Precio</h3>
+                <p>Máximo 2 adultos (o 1 adulto + 2 niños). Precio base: USD $250 por noche. Tarifas especiales para estancias largas o paquetes románticos disponibles.</p>
+            </div>
+        </section>
+
+        <section class="room-location">
+            <h3>Ubicación en el Hotel</h3>
+            <p>Esta habitación se encuentra en el ala principal del hotel, con fácil acceso a la piscina y el restaurante. Disfruta de la tranquilidad rodeada de naturaleza.</p>
+            <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
+                <p> <img src="../Images/mapainteractivo.323Z.png" alt="Vista general de la Habitación Deluxe con cama king size y decoración elegante" loading="lazy"></p>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
+            <h3 id="cta-title">Reserva tu Estancia</h3>
+            <p>¿Interesado en esta habitación? Completa el formulario para una cotización personalizada o reserva directamente.</p>
+            <form class="quick-reserve" aria-label="Formulario rápido de reserva">
+                <label for="checkin">Fecha de entrada:</label>
+                <input type="date" id="checkin" name="checkin" required>
+                <label for="checkout">Fecha de salida:</label>
+                <input type="date" id="checkout" name="checkout" required>
+                <label for="guests">Número de huéspedes:</label>
+                <select id="guests" name="guests">
+                    <option value="1">1 adulto</option>
+                    <option value="2">2 adultos</option>
+                </select>
+                <button type="submit" class="btn-reserve">Solicitar Reserva</button>
+            </form>
+            <a href="../reservation/reservations.html" class="btn-full-reserve">Reservar Completa</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados</p>
+        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
+           <div class="social-links">
+                <a href="https://facebook.com">Facebook</a> |
+                <a href="https://instagram.com">Instagram</a> |
+                <a href="https://twitter.com">Twitter</a>
+        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

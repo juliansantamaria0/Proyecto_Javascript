@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitaciones - Hotel el Rincón del Carmen</title>
+    <title>Habitaciones - Hotel El Rincón del Carmen</title>
+    <meta name="description" content="Explora las exclusivas habitaciones del Hotel El Rincón del Carmen, diseñadas para ofrecer confort, lujo y una experiencia inolvidable en Santander.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Habitaciones/rooms.css">
+
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Habitaciones/rooms.html">Habitaciones</a></li>
+                <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
                 <li><a href="../servicios/services.html">Servicios</a></li>
                 <li><a href="../reservation/reservations.html">Reservas</a></li>
                 <li><a href="../contactos/contactos.html">Contacto</a></li>
@@ -22,14 +25,14 @@
             </ul>
         </nav>
     </header>
-    
-    <section class="features-section" id="habitaciones">
-        <h2 class="section-title">Nuestras Habitaciones Exclusivas</h2>
-        <p class="section-subtitle">Descubre la habitación perfecta para tu estancia inolvidable.</p>
+
+    <section class="features-section" id="habitaciones" aria-labelledby="rooms-title">
+        <h2 class="section-title" id="rooms-title">Nuestras Habitaciones Exclusivas</h2>
+        <p class="section-subtitle">Descubre la habitación perfecta para tu estancia inolvidable en Santander.</p>
         <div class="features-grid">
             <figure class="feature-card">
                 <div class="feature-icon">
-                    <img src="../Images/deluxe.jpg" alt="Habitación Deluxe con vista al mar">
+                    <img src="../Images/deluxe.jpg" alt="Habitación Deluxe con vista al mar" aria-label="Habitación Deluxe con vista al mar">
                 </div>
                 <figcaption>
                     <h3>Habitación Deluxe</h3>
@@ -43,7 +46,7 @@
 
             <figure class="feature-card">
                 <div class="feature-icon">
-                    <img src="../Images/estandar.jpg" alt="Habitación Estándar cómoda">
+                    <img src="../Images/estandar.jpg" alt="Habitación Estándar cómoda" aria-label="Habitación Estándar cómoda">
                 </div>
                 <figcaption>
                     <h3>Habitación Estándar</h3>
@@ -57,7 +60,7 @@
 
             <figure class="feature-card">
                 <div class="feature-icon">
-                    <img src="../Images/jacuzzi.jpg" alt="Suite Ejecutiva con jacuzzi">
+                    <img src="../Images/jacuzzi.jpg" alt="Suite Ejecutiva con jacuzzi" aria-label="Suite Ejecutiva con jacuzzi">
                 </div>
                 <figcaption>
                     <h3>Suite Ejecutiva</h3>
@@ -71,7 +74,7 @@
 
             <figure class="feature-card">
                 <div class="feature-icon">
-                    <img src="../Images/familiar.jpg" alt="Habitación Familiar espaciosa">
+                    <img src="../Images/familiar.jpg" alt="Habitación Familiar espaciosa" aria-label="Habitación Familiar espaciosa">
                 </div>
                 <figcaption>
                     <h3>Habitación Familiar</h3>
@@ -85,7 +88,7 @@
 
             <figure class="feature-card">
                 <div class="feature-icon">
-                    <img src="../Images/presidencial.jpg" alt="Suite Presidencial de lujo">
+                    <img src="../Images/presidencial.jpg" alt="Suite Presidencial de lujo" aria-label="Suite Presidencial de lujo">
                 </div>
                 <figcaption>
                     <h3>Suite Presidencial</h3>
@@ -99,7 +102,7 @@
 
             <figure class="feature-card">
                 <div class="feature-icon">
-                    <img src="../Images/vistaciudad.jpg" alt="Habitación con vista a la ciudad">
+                    <img src="../Images/vistaciudad.jpg" alt="Habitación con vista a la ciudad" aria-label="Habitación con vista a la ciudad">
                 </div>
                 <figcaption>
                     <h3>Habitación Vista Ciudad</h3>
@@ -113,7 +116,7 @@
 
             <figure class="feature-card">
                 <div class="feature-icon">
-                    <img src="../Images/spa.jpg" alt="Habitación con acceso a spa">
+                    <img src="../Images/spa.jpg" alt="Habitación con acceso a spa" aria-label="Habitación con acceso a spa">
                 </div>
                 <figcaption>
                     <h3>Habitación Spa</h3>
@@ -127,7 +130,7 @@
 
             <figure class="feature-card">
                 <div class="feature-icon">
-                    <img src="../Images/suite.jpg" alt="Suite de Lujo">
+                    <img src="../Images/suite.jpg" alt="Suite de Lujo" aria-label="Suite de Lujo">
                 </div>
                 <figcaption>
                     <h3>Suite de Lujo</h3>
@@ -140,11 +143,16 @@
             </figure>
         </div>
     </section>
-   <footer>
-        <p>&copy; 2025 Hotel el Rincón del Carmen 
-        </p>Todos los derechos reservados</p>
-        <p>Contactanos:<a href="../contactos/contactos.html"> Contacto</a></p>
-          <p>Desarrollado por:<a href="https://github.com/juliansantamaria0"> juliansantamaria</a></p>
+
+    <footer>
+        <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados</p>
+        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
+         <div class="social-links">
+            <a href="https://facebook.com">Facebook</a> |
+            <a href="https://instagram.com">Instagram</a> |
+            <a href="https://twitter.com">Twitter</a>
+        </div>
+        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
     </footer>
 
     <script type="module" src="../app.js"></script>

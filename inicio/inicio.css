@@ -1,0 +1,426 @@
+/* inicio.css - Enhanced styles for main sections of the hotel homepage (excluding header and footer) */
+/* Paleta de colores: Fondo neutro, acentos cálidos para un hotel elegante */
+/* Fuentes: Elegant sans-serif stack for modern legibility */
+
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #2f2f2f;
+    background-color: #f9f6f2; /* Slightly warmer beige for elegance */
+    scroll-behavior: smooth;
+}
+
+/* Sección Inicio (Hero con video) */
+.home {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.cover-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: scale(1.1); /* Slight zoom for subtle parallax effect */
+    transition: transform 0.5s ease;
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); /* Gradient overlay */
+    z-index: -1;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+    padding: 2.5rem 3rem;
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 0 1.5rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    font-style: italic;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #d4a574; /* Marrón dorado cálido */
+    color: white;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b5895e;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección Sobre Nosotros */
+.about {
+    padding: 5rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.about h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #5a4a3e;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.about h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #d4a574;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #4a4036;
+    opacity: 0.85;
+    line-height: 1.8;
+}
+
+/* Sección Habitaciones */
+.rooms {
+    padding: 5rem 2rem;
+    background-color: #f9f6f2;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rooms h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #5a4a3e;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.rooms h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #d4a574;
+}
+
+.rooms p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: #4a4036;
+    opacity: 0.85;
+}
+
+.rooms-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.rooms-gallery > * {
+    background-color: #e0d7c3;
+    height: 280px;
+    border-radius: 15px;
+    border: 1px solid #d4a574;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #666;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.rooms-gallery > *:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección Servicios */
+.services {
+    padding: 5rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #5a4a3e;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.services h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #d4a574;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background-color: #f9f6f2;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #e0d7c3;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 1.2rem;
+    filter: grayscale(10%) brightness(1.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover img {
+    transform: scale(1.1);
+}
+
+.service-item p {
+    font-size: 1.1rem;
+    color: #5a4a3e;
+    font-weight: 500;
+}
+
+/* Sección Testimonios */
+.testimonials {
+    padding: 5rem 2rem;
+    background-color: #f9f6f2;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #5a4a3e;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.testimonials h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #d4a574;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-item {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-style: italic;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-item::before {
+    content: '"';
+    font-size: 5rem;
+    color: #d4a574;
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.testimonial-item p:first-of-type {
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.testimonial-item p:last-of-type {
+    font-style: normal;
+    font-weight: 600;
+    color: #5a4a3e;
+    margin-top: 1.2rem;
+    font-size: 1rem;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .about, .rooms, .services, .testimonials {
+        padding: 3rem 1.5rem;
+    }
+    
+    .about h2, .rooms h2, .services h2, .testimonials h2 {
+        font-size: 2.2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .service-item {
+        padding: 1.5rem;
+    }
+    
+    .service-item img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .rooms-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        height: 80vh;
+        min-height: 500px;
+    }
+    
+    .hero-content {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 1rem 1.8rem;
+        font-size: 1rem;
+    }
+    
+    .rooms-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}

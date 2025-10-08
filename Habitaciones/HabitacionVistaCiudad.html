@@ -3,22 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitaciones - Hotel el Rincón del Carmen</title>
+    <title>Habitación Vista Ciudad - Hotel El Rincón del Carmen</title>
+    <meta name="description" content="Habitación Vista Ciudad en el Hotel El Rincón del Carmen: vistas urbanas vibrantes y comodidad moderna por USD $180/noche. Reserva hoy.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Habitaciones/habitaciones.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Habitaciones/rooms.html">Habitaciones</a></li>
-                <li><a href="../servicios/services.html">Servicios</a></li>
-                <li><a href="../reservation/reservations.html">Reservas</a></li>
-                <li><a href="../contactos/contactos.html">Contacto</a></li>
-                <li><a href="../admin/admin.html">Admin</a></li>
-                <li><a href="../historia/historia.html">Historia</a></li>
-                <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-            </ul>
-        </nav>
-    </header>
+     <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
+                    <li><a href="../servicios/services.html">Servicios</a></li>
+                    <li><a href="../reservation/reservations.html">Reservas</a></li>
+                    <li><a href="../contactos/contactos.html">Contacto</a></li>
+                    <li><a href="../admin/admin.html">Admin</a></li>
+                    <li><a href="../historia/historia.html">Historia</a></li>
+                    <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero-section room-hero" aria-labelledby="room-hero-title">
+            <div class="hero-content">
+                <h2 id="room-hero-title">Habitación Vista Ciudad</h2>
+                <p class="room-rating">★★★★☆ (4.7/5) - USD $180/noche</p>
+                <span class="availability disponible" aria-label="Esta habitación está disponible">Disponible</span>
+            </div>
+        </section>
+
+        <section class="room-content" aria-label="Detalles de la Habitación Vista Ciudad">
+            <div class="room-gallery">
+                <img src="../images/vista-ciudad-1.jpg" alt="Habitación Vista Ciudad con balcón y panorámica urbana" loading="lazy">
+                <img src="../images/vista-ciudad-2.jpg" alt="Interior moderno de la Habitación Vista Ciudad con cama queen" loading="lazy">
+                <img src="../images/vista-ciudad-3.jpg" alt="Vista nocturna de la ciudad desde la Habitación Vista Ciudad" loading="lazy">
+            </div>
+
+            <div class="room-description">
+                <h3>Descripción</h3>
+                <p>Disfruta de la energía de la ciudad desde esta habitación de 35 m², con balcón privado y vistas impresionantes al skyline. Ideal para viajeros de negocios o turistas urbanos que buscan comodidad con un toque vibrante.</p>
+
+                <h3>Amenidades</h3>
+                <ul class="amenities-list">
+                    <li>Cama queen size</li>
+                    <li>Baño privado con amenities urbanos</li>
+                    <li>Balcón con vistas a la ciudad</li>
+                    <li>Wi-Fi de alta velocidad</li>
+                    <li>Aire acondicionado y escritorio de trabajo</li>
+                    <li>TV con canales locales e internacionales</li>
+                    <li>Acceso a transporte cercano</li>
+                    <li>Desayuno con opciones rápidas incluido</li>
+                </ul>
+
+                <h3>Capacidad y Precio</h3>
+                <p>Máximo 2 adultos + 1 niño. Precio base: USD $180 por noche. Tarifas especiales para estancias urbanas extendidas.</p>
+            </div>
+        </section>
+
+        <section class="room-location">
+            <h3>Ubicación en el Hotel</h3>
+            <p>En el piso alto del ala norte, orientada hacia el centro de la ciudad para vistas óptimas y proximidad a atracciones urbanas.</p>
+            <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
+             <p> <img src="../Images/mapainteractivo.323Z.png" alt="Vista general de la Habitación Deluxe con cama king size y decoración elegante" loading="lazy"></p>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
+            <h3 id="cta-title">Reserva tu Estancia</h3>
+            <p>Vive la ciudad desde tu habitación. Reserva con guía de atracciones locales.</p>
+            <form class="quick-reserve" aria-label="Formulario rápido de reserva">
+                <label for="checkin">Fecha de entrada:</label>
+                <input type="date" id="check
+                
