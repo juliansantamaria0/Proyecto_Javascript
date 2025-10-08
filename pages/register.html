@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro — Rincón del Carmen</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <div id="nav"></div>
+  <main class="container section">
+    <h1 class="h2">Crea tu cuenta</h1>
+    <form id="formReg" class="card pad" onsubmit="return false;">
+      <div class="row">
+        <div><label class="label">Identificación</label><input class="input" id="id"></div>
+        <div><label class="label">Nombre completo</label><input class="input" id="name"></div>
+        <div><label class="label">Nacionalidad</label><input class="input" id="nation" value="CO"></div>
+        <div><label class="label">Email</label><input class="input" id="email" type="email"></div>
+        <div><label class="label">Teléfono</label><input class="input" id="phone" type="tel"></div>
+        <div><label class="label">Contraseña</label><input class="input" id="pass" type="password"></div>
+      </div>
+      <div style="margin-top:12px"><button class="btn" id="btnReg">Crear cuenta</button></div>
+    </form>
+  </main>
+  <div id="foot"></div>
+  <script src="/assets/js/core.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/register.js"></script>
+</body>
+</html>

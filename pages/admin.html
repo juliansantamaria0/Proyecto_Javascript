@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin — Rincón del Carmen</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <div id="nav"></div>
+  <main class="container section">
+    <h1 class="h2">Panel de administración</h1>
+    <div class="alert">Solo el administrador puede gestionar habitaciones y reservas.</div>
+
+    <section class="section">
+      <h2 class="h2">Habitaciones</h2>
+      <form id="roomForm" class="card pad" onsubmit="return false;">
+        <div class="row">
+          <div><label class="label">ID</label><input class="input" id="r_id" placeholder="dlx-2"></div>
+          <div><label class="label">Nombre</label><input class="input" id="r_name"></div>
+          <div><label class="label">Camas</label><input class="input" id="r_beds" type="number" min="1" value="1"></div>
+          <div><label class="label">Capacidad máxima</label><input class="input" id="r_max" type="number" min="1" value="2"></div>
+          <div><label class="label">Precio / noche</label><input class="input" id="r_price" type="number" min="0" value="200000"></div>
+          <div><label class="label">Foto (ruta)</label><input class="input" id="r_photo" placeholder="Images/estandar.jpg"></div>
+        </div>
+        <label class="label" style="margin-top:10px;">Características (coma: wifi,tv,jacuzzi)</label>
+        <input class="input" id="r_features" placeholder="wifi,tv">
+        <div style="margin-top:12px"><button class="btn" id="btnSaveRoom">Guardar/Actualizar</button></div>
+      </form>
+
+      <table class="table" id="roomTable">
+        <thead><tr><th>ID</th><th>Nombre</th><th>Cap.</th><th>Precio</th><th>Acciones</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2 class="h2">Reservas</h2>
+      <table class="table" id="resTable">
+        <thead><tr><th>ID</th><th>Cliente</th><th>Habitación</th><th>Fechas</th><th>Total</th><th>Estado</th><th>Acciones</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+  <div id="foot"></div>
+  <script src="/assets/js/core.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/admin.js"></script>
+</body>
+</html>

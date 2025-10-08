@@ -1,102 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitación Spa - Hotel El Rincón del Carmen</title>
-    <meta name="description" content="Habitación Spa relajante en el Hotel El Rincón del Carmen: acceso directo al spa y tratamientos incluidos por USD $300/noche. Reserva ahora.">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../Habitaciones/habitaciones.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Habitación Familiar — Hotel El Rincón del Carmen</title>
+  <meta name="description" content="Habitación Familiar espaciosa en el Hotel El Rincón del Carmen: perfecta para familias con niños por USD $200/noche. Reserva ahora." />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../Habitaciones/habitaciones.css" />
 </head>
 <body>
-     <header>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
-                    <li><a href="../servicios/services.html">Servicios</a></li>
-                    <li><a href="../reservation/reservations.html">Reservas</a></li>
-                    <li><a href="../contactos/contactos.html">Contacto</a></li>
-                    <li><a href="../historia/historia.html">Historia</a></li>
-                    <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-                </ul>
-            </nav>
-        </header>
+  <!-- ====== NAVBAR (sticky) ====== -->
+  <header role="banner">
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
+        <li><a href="../servicios/services.html">Servicios</a></li>
+        <li><a href="../reservation/reservations.html">Reservas</a></li>
+        <li><a href="../contactos/contactos.html">Contacto</a></li>
+        <li><a href="../historia/historia.html">Historia</a></li>
+        <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section class="hero-section room-hero" aria-labelledby="room-hero-title">
-            <div class="hero-content">
-                <h2 id="room-hero-title">Habitación Spa</h2>
-                <p class="room-rating">★★★★★ (4.9/5) - USD $300/noche</p>
-                <span class="availability disponible" aria-label="Esta habitación está disponible">Disponible</span>
-            </div>
-        </section>
+  <main class="container" role="main" aria-labelledby="room-hero-title">
+    <!-- ====== HERO ====== -->
+    <section class="hero-section room-hero" aria-labelledby="room-hero-title">
+      <div class="hero-content">
+        <h1 id="room-hero-title">Habitación Familiar</h1>
+        <p class="room-rating">★★★★☆ (4.6/5) — USD $200/noche</p>
+        <!-- Usa .stock para disponible, .reservada para no disponible -->
+        <span class="availability stock" aria-label="Esta habitación está disponible">Disponible</span>
+      </div>
+    </section>
 
-        <section class="room-content" aria-label="Detalles de la Habitación Spa">
-            <div class="room-gallery">
-                <img src="../images/spa-1.jpg" alt="Habitación Spa con baño de vapor privado y decoración zen" loading="lazy">
-                <img src="../images/spa-2.jpg" alt="Acceso directo al spa desde la Habitación Spa con toallas y aceites esenciales" loading="lazy">
-                <img src="../images/spa-3.jpg" alt="Área de relajación en la Habitación Spa con vistas al jardín zen" loading="lazy">
-            </div>
+    <!-- ====== GALERÍA + DESCRIPCIÓN ====== -->
+    <section class="room-content" aria-label="Detalles de la Habitación Familiar">
+      <div class="room-gallery">
+        <!-- Rutas normalizadas a ../Images/... -->
+        <img src="../Images/familiar-1.jpg" alt="Habitación Familiar con dos camas queen y área de juegos para niños" loading="lazy" />
+        <img src="../Images/familiar-2.jpg" alt="Baño familiar con accesorios para niños en la Habitación Familiar" loading="lazy" />
+        <img src="../Images/familiar-3.jpg" alt="Habitación Familiar con acceso al jardín infantil del hotel" loading="lazy" />
+      </div>
 
-            <div class="room-description">
-                <h3>Descripción</h3>
-                <p>La Habitación Spa es un santuario de relajación total, con 50 m² diseñados para el bienestar. Incluye acceso directo al spa del hotel, baño con vapor y aromaterapia, y un ambiente sereno perfecto para desconectar del estrés diario.</p>
+      <div class="room-description">
+        <h2>Descripción</h2>
+        <p>
+          La Habitación Familiar está pensada para las necesidades de las familias con niños. Con 40&nbsp;m² de espacio,
+          ofrece dos camas queen size, un área de juegos segura y acceso directo a las zonas infantiles del hotel.
+          Ideal para vacaciones en familia, con comodidades que hacen el viaje más fácil y divertido.
+        </p>
 
-                <h3>Amenidades</h3>
-                <ul class="amenities-list">
-                    <li>Cama king size con sábanas terapéuticas</li>
-                    <li>Baño con vapor y ducha de lluvia</li>
-                    <li>Acceso ilimitado al spa (masaje de bienvenida incluido)</li>
-                    <li>Wi-Fi gratis y altavoces para música relajante</li>
-                    <li>Aire acondicionado, minibar con infusiones</li>
-                    <li>TV con canales de meditación</li>
-                    <li>Servicio de habitaciones con menús saludables</li>
-                    <li>Desayuno detox incluido</li>
-                </ul>
+        <h3>Amenidades</h3>
+        <ul class="amenities-list">
+          <li>2 camas queen size o 1 king + camas extras</li>
+          <li>Baño privado con accesorios para niños</li>
+          <li>Área de juegos y cunas disponibles</li>
+          <li>Wi-Fi gratis</li>
+          <li>Aire acondicionado y TV familiar</li>
+          <li>Acceso a piscina infantil</li>
+          <li>Desayuno buffet con opciones para niños</li>
+          <li>Estacionamiento familiar</li>
+        </ul>
 
-                <h3>Capacidad y Precio</h3>
-                <p>Máximo 2 adultos. Precio base: USD $300 por noche. Paquetes spa con descuentos en tratamientos adicionales.</p>
-            </div>
-        </section>
+        <h3>Capacidad y precio</h3>
+        <p>
+          Máximo 4 personas (2 adultos + 2 niños). Precio base: <strong>USD $200/noche</strong>.
+          Paquetes familiares con descuentos en actividades incluidas.
+        </p>
+      </div>
+    </section>
 
-        <section class="room-location">
-            <h3>Ubicación en el Hotel</h3>
-            <p>Adyacente al spa principal, en el ala oeste, para un acceso inmediato a las instalaciones de bienestar.</p>
-            <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
-                 <p> <img src="../Images/mapainteractivo.323Z.png" alt="Vista general de la Habitación Deluxe con cama king size y decoración elegante" loading="lazy"></p>
-            </div>
-        </section>
+    <!-- ====== UBICACIÓN ====== -->
+    <section class="room-location" aria-labelledby="location-title">
+      <h2 id="location-title">Ubicación en el hotel</h2>
+      <p>
+        Ubicada en el ala sur, cerca del jardín infantil y la piscina familiar, para una estancia segura y divertida.
+      </p>
+      <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
+        <img src="../Images/mapainteractivo.323Z.png" alt="Mapa del hotel señalando el ala sur donde se ubica la Habitación Familiar" loading="lazy" />
+      </div>
+    </section>
 
-        <section class="cta-section" aria-labelledby="cta-title">
-            <h3 id="cta-title">Reserva tu Estancia</h3>
-            <p>Ideal para un retiro de relajación. Reserva con sesión de spa incluida.</p>
-            <form class="quick-reserve" aria-label="Formulario rápido de reserva">
-                <label for="checkin">Fecha de entrada:</label>
-                <input type="date" id="checkin" name="checkin" required>
-                <label for="checkout">Fecha de salida:</label>
-                <input type="date" id="checkout" name="checkout" required>
-                <label for="guests">Número de huéspedes:</label>
-                <select id="guests" name="guests">
-                    <option value="1">1 adulto</option>
-                    <option value="2">2 adultos</option>
-                </select>
-                <button type="submit" class="btn-reserve">Solicitar Reserva</button>
-            </form>
-            <a href="../reservation/reservations.html" class="btn-full-reserve">Reservar Completa</a>
-        </section>
+    <!-- ====== CTA RESERVA ====== -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <h2 id="cta-title">Reserva tu estancia</h2>
+      <p class="muted">Perfecta para familias. Reserva con opciones especiales para niños.</p>
 
-    <footer>
-        <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados</p>
-        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
-            <div class="social-links">
-                <a href="https://facebook.com">Facebook</a> |
-                <a href="https://instagram.com">Instagram</a> |
-                <a href="https://twitter.com">Twitter</a>
-        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
-    </footer>
+      <form class="quick-reserve" aria-label="Formulario rápido de reserva" onsubmit="return false;">
+        <div>
+          <label for="checkin">Fecha de entrada</label>
+          <input type="date" id="checkin" name="checkin" required />
+        </div>
+        <div>
+          <label for="checkout">Fecha de salida</label>
+          <input type="date" id="checkout" name="checkout" required />
+        </div>
+        <div>
+          <label for="guests">Número de huéspedes</label>
+          <select id="guests" name="guests" aria-label="Selecciona el número de huéspedes">
+            <option value="2">2 adultos</option>
+            <option value="4" selected>2 adultos + 2 niños</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-reserve" aria-label="Solicitar reserva de Habitación Familiar">Solicitar reserva</button>
+      </form>
 
+      <a href="../reservation/reservations.html" class="btn-full-reserve" aria-label="Ir a reservas para completar la reserva">Reservar completa</a>
+    </section>
+  </main>
 
+  <!-- ====== FOOTER ====== -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados.</p>
+    <p>Contáctanos: <a href="../contactos/contactos.html">Formulario de contacto</a></p>
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> |
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> |
+      <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+    </div>
+    <p>Desarrollado por: <a href="https://github.com/juliansantamaria0" target="_blank" rel="noopener">juliansantamaria</a></p>
+  </footer>
+
+  <!-- (Opcional) Conexión a disponibilidad real (si usas HotelCore)
+  <script src="/assets/js/core.js" defer></script>
+  <script>
+    // if (window.HotelCore) {
+    //   const today = new Date();
+    //   const tomorrow = new Date(Date.now() + 86400000);
+    //   const ymd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    //   const available = HotelCore.Reservations.isAvailable('fam-1', ymd(today), ymd(tomorrow));
+    //   const badge = document.querySelector('.availability');
+    //   if (badge) {
+    //     if (available) { badge.textContent = 'Disponible'; badge.classList.remove('reservada'); badge.classList.add('stock'); }
+    //     else { badge.textContent = 'Reservada'; badge.classList.remove('stock'); badge.classList.add('reservada'); }
+    //   }
+    // }
+  </script>
+  -->
 </body>
 </html>

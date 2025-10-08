@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patrocinadores — Hotel El Rincón del Carmen</title>
+  <meta name="description" content="Conoce a los patrocinadores del Hotel El Rincón del Carmen, quienes nos apoyan para ofrecer experiencias únicas a nuestros huéspedes." />
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Tus estilos globales -->
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../assets/css/patrocinadores.css" />
+
+</head>
+<body>
+  <!-- ====== NAVBAR ====== -->
+  <header class="header" role="banner">
+    <div class="nav">
+      <a class="brand" href="../index.html" aria-label="Hotel El Rincón del Carmen — Inicio">Rincón del Carmen</a>
+      <div class="grow"></div>
+      <button class="burger" id="btnMenu" aria-label="Abrir menú">☰</button>
+      <nav aria-label="Navegación principal">
+        <div class="menu" id="menu">
+          <a href="../index.html">Inicio</a>
+          <a href="../pages/disponibilidad.html">Disponibilidad</a>
+          <a href="../servicios/services.html">Servicios</a>
+          <a href="../Habitaciones/rooms.html">Habitaciones</a>
+          <a href="../historia/historia.html">Historia</a>
+          <a href="../Patrocinadores/patrocinadores.html" aria-current="page">Patrocinadores</a>
+          <a href="../contactos/contactos.html">Contacto</a>
+          <a href="../reservation/reservations.html">Reservas</a>
+          <a href="../pages/admin.html">Admin</a>
+          <!-- Sesión (se ajusta por JS si existe HotelCore) -->
+          <a href="../pages/login.html" id="lnkLogin" class="btn-login">Ingresar</a>
+          <button id="btnLogout" class="btn-logout" style="display:none">Salir</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== CONTENIDO ====== -->
+  <main class="container" role="main" aria-labelledby="sponsors-title">
+    <section class="features-section" id="marcas">
+      <h1 class="section-title" id="sponsors-title">Nuestros Patrocinadores</h1>
+      <p class="section-subtitle">Explora las marcas que nos apoyan para ofrecerte una experiencia única.</p>
+
+      <div class="features-grid">
+        <!-- Booking -->
+        <article class="feature-card">
+          <div class="feature-icon">
+            <img src="../Images/booking.png" alt="Logo de Booking.com" />
+          </div>
+          <h3>Booking.com</h3>
+          <p>Booking.com es uno de los portales de reservas más grandes y confiables del mundo. Su patrocinio permite mayor visibilidad internacional y herramientas de gestión para mejorar la experiencia de reserva.</p>
+        </article>
+
+        <!-- Airbnb -->
+        <article class="feature-card">
+          <div class="feature-icon">
+            <img src="../Images/airbnb.png" alt="Logo de Airbnb" />
+          </div>
+          <h3>Airbnb</h3>
+          <p>Airbnb colabora con hoteles boutique para ofrecer experiencias auténticas. Aporta innovación y visibilidad digital para viajeros que buscan estancias personalizadas.</p>
+        </article>
+
+        <!-- Avianca -->
+        <article class="feature-card">
+          <div class="feature-icon">
+            <img src="../Images/avianca.png" alt="Logo de Avianca" />
+          </div>
+          <h3>Avianca</h3>
+          <p>Avianca ofrece paquetes integrados de vuelos y alojamiento. Beneficios como millas, descuentos y transporte directo desde el aeropuerto elevan la comodidad de los huéspedes.</p>
+        </article>
+
+        <!-- Coca-Cola -->
+        <article class="feature-card">
+          <div class="feature-icon">
+            <img src="../Images/cocacola.png" alt="Logo de Coca-Cola" />
+          </div>
+          <h3>Coca-Cola</h3>
+          <p>Abastece bebidas para bar, restaurante y minibar. Su patrocinio asegura calidad y variedad, reforzando una identidad fresca y reconocida internacionalmente.</p>
+        </article>
+
+        <!-- Visa -->
+        <article class="feature-card">
+          <div class="feature-icon">
+            <img src="../Images/Visa.png" alt="Logo de Visa" />
+          </div>
+          <h3>Visa</h3>
+          <p>Promociones exclusivas, descuentos por temporada y planes sin intereses. Su apoyo hace la estadía más accesible y atractiva.</p>
+        </article>
+
+        <!-- Claro -->
+        <article class="feature-card">
+          <div class="feature-icon">
+            <img src="../Images/claro.png" alt="Logo de Claro" />
+          </div>
+          <h3>Claro</h3>
+          <p>Garantiza conectividad de alta calidad con internet veloz, TV digital y cobertura móvil en todo el hotel, elevando el confort y la modernidad.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer role="contentinfo">
+    <div class="foot-inner">
+      <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados.</p>
+      <p>Contáctanos: <a href="../contactos/contactos.html">Formulario de contacto</a></p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> |
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> |
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+      </div>
+      <p>Desarrollado por: <a href="https://github.com/juliansantamaria0" target="_blank" rel="noopener">juliansantamaria</a></p>
+    </div>
+  </footer>
+
+  <!-- ====== JS: menú móvil + sesión opcional ====== -->
+  <script src="../assets/js/patrocinadores.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto — Rincón del Carmen</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <div id="nav"></div>
+  <main class="container section">
+    <h1 class="h2">Ubicación y contacto</h1>
+    <div class="grid">
+      <div class="card pad">
+        <h3>Dirección</h3>
+        <p>Calle 36 # 27-45, Bucaramanga, Santander</p>
+        <p>Tel: +57 (607) 000 0000</p>
+        <p>Email: reservas@rincon.com</p>
+        <a class="btn" href="tel:+573000000000">Llamar ahora</a>
+      </div>
+      <div class="card pad">
+        <h3>Escríbenos</h3>
+        <form onsubmit="event.preventDefault(); alert('Mensaje enviado. ¡Gracias!')">
+          <label class="label">Nombre</label>
+          <input class="input" required>
+          <label class="label">Email</label>
+          <input class="input" type="email" required>
+          <label class="label">Mensaje</label>
+          <textarea class="input" rows="4" required></textarea>
+          <div style="margin-top:12px"><button class="btn">Enviar</button></div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <div id="foot"></div>
+  <script src="/assets/js/core.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/contacto.js"></script>
+</body>
+</html>

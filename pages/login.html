@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ingresar — Rincón del Carmen</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <div id="nav"></div>
+  <main class="container section">
+    <h1 class="h2">Inicia sesión</h1>
+    <form id="formLogin" class="card pad" onsubmit="return false;">
+      <label class="label">Email</label>
+      <input class="input" id="email" type="email" required>
+      <label class="label">Contraseña</label>
+      <input class="input" id="pass" type="password" required>
+      <div style="display:flex; gap:10px; margin-top:12px">
+        <button class="btn" id="btnLogin">Entrar</button>
+        <a class="btn ghost" href="/pages/register.html">Crear cuenta</a>
+      </div>
+      <p class="alert" style="margin-top:10px;">Admin demo: admin@rincon.com / admin123</p>
+    </form>
+  </main>
+  <div id="foot"></div>
+  <script src="/assets/js/core.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/login.js"></script>
+</body>
+</html>

@@ -1,201 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel el Rincón del Carmen - Inicio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="inicio/inicio.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel El Rincón del Carmen — Boutique & Wellness</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="Habitaciones/rooms.html">Habitaciones</a></li>
-                <li><a href="servicios/services.html">Servicios</a></li>
-                <li><a href="reservation/reservations.html">Reservas</a></li>
-                <li><a href="contactos/contactos.html">Contacto</a></li>
-                <li><a href="historia/historia.html">Historia</a></li>
-                <li><a href="Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div id="nav"></div>
 
-    <!-- Sección Inicio -->
-    <section id="home" class="home">
-        <video class="cover-video" autoplay muted loop playsinline>
-            <source src="Images/Generated File October 05, 2025 - 3_29PM.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <h1>Bienvenidos a Hotel el Rincón del Carmen</h1>
-            <p>Tu descanso, nuestra prioridad. Descubre la elegancia y comodidad en el corazón de la ciudad.</p>
-            <a href="reservation/reservations.html" class="cta-button">Reservar ahora</a>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="kicker">Boutique & Wellness</span>
+        <h1>Descubre un refugio de calma en Bucaramanga</h1>
+        <p>Habitaciones diseñadas para el descanso, spa de clase mundial y gastronomía local. Reserva en minutos—todo desde tu móvil.</p>
+        <div style="display:flex; gap:12px; margin-top:18px">
+          <a class="btn" href="/pages/disponibilidad.html">Buscar disponibilidad</a>
+          <a class="btn ghost" href="/pages/contacto.html">Cómo llegar</a>
         </div>
+      </div>
+      <div class="card">
+        <img src="/Images/spa_services.jpg" alt="Spa">
+        <div class="pad">
+          <div class="badge"><span class="dot"></span>Experiencia destacada</div>
+          <p style="color:#a9b1bb">Circuito de aguas, masaje aromático y té de hierbas incluido.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Sección Sobre Nosotros -->
-    <section id="about" class="about">
-        <h2>Sobre Nosotros</h2>
-        <p>El Hotel el Rincón del Carmen combina la elegancia tradicional con comodidades modernas. Ubicado en un entorno privilegiado, ofrecemos una experiencia única para viajeros que buscan confort y hospitalidad de primera clase. Nuestra misión es hacer que cada estadía sea inolvidable.</p>
+    <section class="section">
+      <span class="kicker">Habitaciones</span>
+      <h2 class="h2">Confort para cada estilo</h2>
+      <div id="home-rooms" class="grid cols-3"></div>
     </section>
+  </main>
 
-    <!-- Sección Habitaciones Destacadas (Carrusel con Scrollbar) -->
-    <section class="destacados-section" id="rooms" role="region" aria-label="Habitaciones Destacadas">
-        <div class="container">
-            <h2 class="section-title">Habitaciones Destacadas</h2>
-            <p class="section-subtitle">Nuestros 5 modelos más valorados por la comunidad</p>
+  <div id="foot"></div>
 
-            <div class="carousel" role="tablist" aria-label="Carrusel de habitaciones">
-                <button class="carousel-control prev" aria-label="Anterior habitación">&#10094;</button>
-                <div class="carousel-track" tabindex="0" aria-live="polite">
-                    <!-- 1: Habitación Deluxe -->
-                    <article class="carousel-item" id="room-1" role="tabpanel">
-                        <figure class="carousel-media">
-                            <img src="Images/deluxe.jpg" alt="Habitación Deluxe con vista al mar" loading="lazy">
-                        </figure>
-                        <h3 class="carousel-name">Habitación Deluxe</h3>
-                        <p class="carousel-price">USD $250/noche</p>
-                        <div class="carousel-rating" aria-label="Calificación 4.9 de 5">
-                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star half">★</span>
-                            <span class="rating-value">4.9</span>
-                        </div>
-                        <a class="carousel-link" href="Habitaciones/rooms.html">Ver en catálogo →</a>
-                        <a class="btn-details" href="Habitaciones/Habitacion.Deluxe.html">Ver detalles</a>
-                    </article>
-
-                    <!-- 2: Habitación Estándar -->
-                    <article class="carousel-item" id="room-2" role="tabpanel">
-                        <figure class="carousel-media">
-                            <img src="Images/estandar.jpg" alt="Habitación Estándar cómoda" loading="lazy">
-                        </figure>
-                        <h3 class="carousel-name">Habitación Estándar</h3>
-                        <p class="carousel-price">USD $150/noche</p>
-                        <div class="carousel-rating" aria-label="Calificación 4.7 de 5">
-                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
-                            <span class="rating-value">4.7</span>
-                        </div>
-                        <a class="carousel-link" href="Habitaciones/rooms.html">Ver en catálogo →</a>
-                        <a class="btn-details" href="Habitaciones/HabitacionEstandar.html">Ver detalles</a>
-                    </article>
-
-                    <!-- 3: Suite Ejecutiva -->
-                    <article class="carousel-item" id="room-3" role="tabpanel">
-                        <figure class="carousel-media">
-                            <img src="Images/jacuzzi.jpg" alt="Suite Ejecutiva con jacuzzi" loading="lazy">
-                        </figure>
-                        <h3 class="carousel-name">Suite Ejecutiva</h3>
-                        <p class="carousel-price">USD $400/noche</p>
-                        <div class="carousel-rating" aria-label="Calificación 3.0 de 5">
-                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span>
-                            <span class="rating-value">3.0</span>
-                        </div>
-                        <a class="carousel-link" href="Habitaciones/rooms.html">Ver en catálogo →</a>
-                        <a class="btn-details" href="Habitaciones/SuiteEjecutiva.html">Ver detalles</a>
-                    </article>
-
-                    <!-- 4: Habitación Familiar -->
-                    <article class="carousel-item" id="room-4" role="tabpanel">
-                        <figure class="carousel-media">
-                            <img src="Images/familiar.jpg" alt="Habitación Familiar espaciosa" loading="lazy">
-                        </figure>
-                        <h3 class="carousel-name">Habitación Familiar</h3>
-                        <p class="carousel-price">USD $300/noche</p>
-                        <div class="carousel-rating" aria-label="Calificación 4.7 de 5">
-                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
-                            <span class="rating-value">4.7</span>
-                        </div>
-                        <a class="carousel-link" href="Habitaciones/rooms.html">Ver en catálogo →</a>
-                        <a class="btn-details" href="Habitaciones/HabitacionFamiliar.html">Ver detalles</a>
-                    </article>
-
-                    <!-- 5: Suite Presidencial -->
-                    <article class="carousel-item" id="room-5" role="tabpanel">
-                        <figure class="carousel-media">
-                            <img src="Images/presidencial.jpg" alt="Suite Presidencial de lujo" loading="lazy">
-                        </figure>
-                        <h3 class="carousel-name">Suite Presidencial</h3>
-                        <p class="carousel-price">USD $800/noche</p>
-                        <div class="carousel-rating" aria-label="Calificación 4.5 de 5">
-                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
-                            <span class="rating-value">4.5</span>
-                        </div>
-                        <a class="carousel-link" href="Habitaciones/rooms.html">Ver en catálogo →</a>
-                        <a class="btn-details" href="Habitaciones/SuitePresidencial.html">Ver detalles</a>
-                    </article>
-                </div>
-                <button class="carousel-control next" aria-label="Siguiente habitación">&#10095;</button>
-
-                <!-- Dots -->
-                <div class="carousel-dots" aria-label="Navegación del carrusel">
-                    <button class="dot active" aria-label="Ir a la habitación 1" data-slide="0"></button>
-                    <button class="dot" aria-label="Ir a la habitación 2" data-slide="1"></button>
-                    <button class="dot" aria-label="Ir a la habitación 3" data-slide="2"></button>
-                    <button class="dot" aria-label="Ir a la habitación 4" data-slide="3"></button>
-                    <button class="dot" aria-label="Ir a la habitación 5" data-slide="4"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Servicios -->
-    <section id="services" class="services">
-        <h2>Nuestros Servicios</h2>
-        <div class="services-grid">
-            <div class="service-item">
-                <img src="Images/wifi.jpg" alt="WiFi Icon">
-                <p>WiFi de alta velocidad</p>
-            </div>
-            <div class="service-item">
-                <img src="Images/restaurantIcon.webp" alt="Restaurante Icon">
-                <p>Restaurante gourmet</p>
-            </div>
-            <div class="service-item">
-                <img src="Images/Spa.png" alt="Spa Icon">
-                <p>Spa y zona de relajación</p>
-            </div>
-            <div class="service-item">
-                <img src="Images/PiscinaIcon.png" alt="Piscina Icon">
-                <p>Piscina al aire libre</p>
-            </div>
-            <div class="service-item">
-                <img src="Images/parqueadero.png" alt="Parqueadero Icon">
-                <p>Parqueadero gratuito</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Testimonios -->
-    <section id="testimonials" class="testimonials">
-        <h2>Lo que dicen nuestros huéspedes</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-item">
-                <p>"Una experiencia inolvidable. El personal es increíble y las instalaciones son de primera."</p>
-                <p><strong>- María G.</strong></p>
-            </div>
-            <div class="testimonial-item">
-                <p>"El mejor hotel en el que me he hospedado. La comida del restaurante es exquisita."</p>
-                <p><strong>- Juan P.</strong></p>
-            </div>
-            <div class="testimonial-item">
-                <p>"Perfecto para un viaje de negocios o placer. ¡Volveré pronto!"</p>
-                <p><strong>- Ana R.</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Hotel el Rincón del Carmen. Todos los derechos reservados.</p>
-        <p>Contáctanos: <a href="contactos/contactos.html">Contacto</a></p>
-        <div class="social-links">
-            <a href="https://facebook.com">Facebook</a> |
-            <a href="https://instagram.com">Instagram</a> |
-            <a href="https://twitter.com">Twitter</a>
-        </div>
-        <p>Desarrollado por <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
-    </footer>
-
-    <script src="./inicio/inicio.js"></script>
+  <script src="/assets/js/core.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/index.js"></script>
 </body>
 </html>

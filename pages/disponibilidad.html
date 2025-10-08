@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Disponibilidad & Reservas — Rincón del Carmen</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="preconnect" href="/assets/css/disponibilidad.css" />
+</head>
+<body>
+
+  <header id="nav" class="header">
+    <div class="container nav">
+      <a class="logo link" href="/index.html">Rincón del Carmen</a>
+      <div class="grow"></div>
+      <a class="link" href="/pages/disponibilidad.html">Disponibilidad</a>
+      <a class="link" href="/pages/servicios.html">Servicios</a>
+      <a class="link" href="/Habitaciones/rooms.html">Habitaciones</a>
+      <a class="link" href="/pages/historia.html">Historia</a>
+      <a class="link" href="/pages/patrocinadores.html">Patrocinadores</a>
+      <a class="link" href="/pages/contacto.html">Contacto</a>
+      <a class="link" href="/pages/mis-reservas.html">Mis reservas</a>
+      <a class="link" href="/pages/login.html">Ingresar</a>
+    </div>
+  </header>
+
+  <main class="container section" role="main" aria-labelledby="title">
+    <h1 id="title" class="h2">Encuentra tu habitación ideal</h1>
+
+    <form id="filter" class="card pad" aria-describedby="hint" onsubmit="return false;">
+      <p id="hint" class="muted" style="margin-top:0;margin-bottom:12px;">
+        Selecciona fechas, personas y servicios. Te mostraremos solo lo disponible y compatible.
+      </p>
+
+      <div class="row">
+        <div>
+          <label class="label" for="checkIn">Check-in</label>
+          <input class="input" type="date" id="checkIn" required>
+        </div>
+        <div>
+          <label class="label" for="checkOut">Check-out</label>
+          <input class="input" type="date" id="checkOut" required>
+        </div>
+        <div>
+          <label class="label" for="people">Personas</label>
+          <input class="input" type="number" id="people" min="1" value="2" required>
+        </div>
+        <div>
+          <label class="label" for="feature">Servicios</label>
+          <select class="select" id="feature" multiple aria-label="Servicios requeridos">
+            <option value="wifi">Wi-Fi</option>
+            <option value="tv">TV</option>
+            <option value="jacuzzi">Jacuzzi</option>
+            <option value="minibar">Minibar</option>
+            <option value="kitchen">Cocina</option>
+            <option value="balcony">Balcón</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="toolbar" style="margin-top:12px;">
+        <button id="btnSearch" class="btn" type="button" aria-label="Buscar habitaciones disponibles">Buscar</button>
+        <a class="btn ghost" href="/pages/login.html">Iniciar sesión para reservar</a>
+        <button id="btnClear" class="btn ghost" type="button">Limpiar filtros</button>
+      </div>
+    </form>
+
+    <div id="resultsWrap" style="margin-top:18px;">
+      <div id="results" class="grid cols-3" aria-live="polite" aria-busy="false"></div>
+    </div>
+  </main>
+
+  <div id="foot"></div>
+
+  <!-- Carga diferida para asegurar que UI.navbar() esté disponible antes del render de la barra -->
+  <script defer src="/assets/js/core.js"></script>
+  <script defer src="/assets/js/ui.js"></script>
+  <script defer src="/assets/js/disponibilidad.js"></script>
+</body>
+</html>
