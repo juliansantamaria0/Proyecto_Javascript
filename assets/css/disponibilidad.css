@@ -1,0 +1,10 @@
+    /* Mejoras puntuales de esta vista */
+    .toolbar { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .loader {
+      width: 100%; padding:18px; border:1px solid #E6EAF0; background:#fff; border-radius:12px;
+      animation: pulse 1.2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%{opacity:.6} 50%{opacity:1} 100%{opacity:.6} }
+    .empty {
+      border:1px dashed #DCE6EA; padding:20px; border-radius:12px; text-align:center; color:#66727A; background:#fff;
+    }

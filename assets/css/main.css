@@ -1,0 +1,111 @@
+/* =====================================================
+   Hotel El Rincón del Carmen — UI/UX Refresh 
+   - Pastel palette with elegant green accent
+   - Mobile-first responsive layout
+   ===================================================== */
+
+/* Reset & base */
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; }
+img { max-width:100%; display:block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; }
+
+/* Theme Tokens — Pastels */
+:root {
+  --bg: #F9FAFB;            /* pearl */
+  --surface: #FFFFFF;       /* white */
+  --surface-2: #F6F7F9;     /* soft gray */
+  --text: #273138;          /* deep slate */
+  --muted:#66727A;          /* cool slate */
+  --primary:#8ED1B2;        /* pastel green */
+  --primary-600:#6BB894;    /* deeper green */
+  --accent:#F8D57E;         /* pastel amber */
+  --rose:#F6B7C0;           /* blush */
+  --sky:#BBD7F4;            /* baby blue */
+  --mint:#D7F2E3;           /* mint wash */
+  --danger:#FF7B7B;         /* soft red */
+  --ok:#7FD3A5;             /* ok green */
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(0,0,0,.07);
+}
+
+body { background: var(--bg); color: var(--text); line-height:1.6; }
+.container { width: min(1100px, 92vw); margin-inline:auto; }
+
+.header {
+  position: sticky; top:0; z-index:50;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,.75);
+  border-bottom: 1px solid #E6EAF0;
+}
+.nav { display:flex; gap:18px; align-items:center; padding:14px 0; }
+.nav a.logo { font-weight:800; letter-spacing:.6px; color:#1c3026; }
+.nav .grow { flex:1; }
+.nav a.link { opacity:.85; transition: .2s; padding:8px 10px; border-radius:10px; }
+.nav a.link:hover { opacity:1; background: var(--mint); color:#143526; }
+.nav .cta { padding:10px 16px; border-radius:999px; background:var(--primary); color:#0e2d1f; font-weight:700; box-shadow: var(--shadow); }
+.nav .logout { padding:8px 12px; border-radius:10px; border:1px solid #D7E9E0; background:#fff; }
+
+.hero {
+  display:grid; gap:24px; align-items:center;
+  padding: clamp(20px, 6vw, 64px) 0;
+  grid-template-columns: 1.1fr .9fr;
+}
+.hero h1 { font-size: clamp(28px, 5vw, 52px); line-height:1.08; }
+.hero p { color: var(--muted); max-width:60ch; }
+.hero .card {
+  background: linear-gradient(180deg, #fff, #F7FBF9);
+  padding:22px; border-radius: var(--radius); box-shadow: var(--shadow);
+  border: 1px solid #E6F1EC;
+}
+
+.grid { display:grid; gap:18px; }
+.grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; } }
+
+.section { padding: clamp(24px, 6vw, 72px) 0; }
+.kicker { color: #0f5132; background: var(--mint); padding:6px 10px; border-radius:999px; font-weight:700; letter-spacing:.08em; font-size:.82rem; display:inline-block; }
+.h2 { font-size: clamp(22px, 3.5vw, 34px); margin: 10px 0 14px; }
+
+.card {
+  background: var(--surface);
+  border:1px solid #EAF0F2;
+  border-radius: var(--radius);
+  overflow: clip;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.card .pad { padding:18px; }
+
+.badge { display:inline-flex; align-items:center; gap:8px; border:1px solid #E4EEE9; padding:6px 10px; border-radius:999px; font-size:.9rem; color:#2b5645; background:#F1FBF7; }
+.badge .dot { width:10px; height:10px; border-radius:50%; background:var(--primary); }
+
+.footer { border-top:1px solid #E6EAF0; color: var(--muted); padding:28px 0 56px; margin-top:56px; }
+.footer a { color:#1b7e57; }
+
+.btn {
+  background: var(--primary); color:#0e2d1f; font-weight:700;
+  border:none; padding:12px 16px; border-radius:12px;
+}
+.btn.ghost { background: #fff; border:1px solid #DCE6EA; color: var(--text); }
+
+/* Forms */
+.input, .select, textarea.input {
+  width:100%; padding:12px 14px; border-radius:12px;
+  background: #fff; border:1px solid #DEE7EC; color: var(--text);
+}
+.label { font-size:.9rem; color: var(--muted); margin-bottom:6px; display:block; }
+.row { display:grid; gap:14px; grid-template-columns: 1fr 1fr; }
+@media (max-width: 700px){ .row { grid-template-columns: 1fr; } }
+
+.table { width:100%; border-collapse: collapse; background:#fff; border:1px solid #EAF0F2; border-radius:12px; overflow:hidden; }
+.table th, .table td { padding:12px 14px; border-bottom:1px solid #EAF0F2; text-align:left; }
+.table th { color: var(--muted); font-weight: 600; background:#F8FBFD; }
+.table .pill { padding:6px 12px; border-radius:999px; background:#F2F7FA; border:1px solid #E3EEF6; display:inline-block; }
+
+/* Alerts */
+.alert { border:1px solid #E6EAF0; background:#FFFFFF; padding:12px 14px; border-radius:12px; color: var(--muted); }
+.alert.ok { border-color:#CFEAD9; background:#F5FBF8; color:#2f6a4f; }
+.alert.err { border-color:#F7D6D9; background:#FFF5F6; color:#8a333b; }
