@@ -34,13 +34,21 @@ function navbar(){
   </div>`;
 }
 
-function footer(){
+function footer() {
   return `
-  <div class="footer">
-    <div class="container">
-      © ${new Date().getFullYear()} Hotel El Rincón del Carmen — <a href="/pages/contacto.html">Contáctanos</a>
-    </div>
-  </div>`;
+    <footer role="contentinfo">
+      <div class="foot-inner">
+        <p>&copy; ${new Date().getFullYear()} Hotel El Rincón del Carmen. Todos los derechos reservados.</p>
+        <p>Contáctanos: <a href="/contactos/contactos.html">Formulario de contacto</a></p>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> |
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> |
+          <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+        </div>
+        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0" target="_blank" rel="noopener">juliansantamaria</a></p>
+      </div>
+    </footer>
+  `;
 }
 
 window.UI = { $, $$, fmtCurrency, ensureAuth, navbar, footer };

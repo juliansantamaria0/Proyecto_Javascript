@@ -1,104 +1,52 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suite Lujo - Hotel El Rincón del Carmen</title>
-    <meta name="description" content="Suite Lujo exclusiva en el Hotel El Rincón del Carmen: amenidades de alta gama y privacidad total por USD $450/noche. Reserva ya.">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../Habitaciones/habitaciones.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios — Rincón del Carmen</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="../Habitaciones/habitaciones.css" />
+  
 </head>
 <body>
-     <header>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
-                    <li><a href="../servicios/services.html">Servicios</a></li>
-                    <li><a href="../reservation/reservations.html">Reservas</a></li>
-                    <li><a href="../contactos/contactos.html">Contacto</a></li>
-                    <li><a href="../historia/historia.html">Historia</a></li>
-                    <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section class="hero-section room-hero" aria-labelledby="room-hero-title">
-            <div class="hero-content">
-                <h2 id="room-hero-title">Suite Lujo</h2>
-                <p class="room-rating">★★★★★ (5.0/5) - USD $450/noche</p>
-                <span class="availability reservada" aria-label="Esta habitación está actualmente reservada">Reservada</span>
-            </div>
-        </section>
-
-        <section class="room-content" aria-label="Detalles de la Suite Lujo">
-            <div class="room-gallery">
-                <img src="../images/lujo-1.jpg" alt="Sala de estar lujosa en la Suite Lujo con muebles de diseño" loading="lazy">
-                <img src="../images/lujo-2.jpg" alt="Dormitorio principal de la Suite Lujo con cama king y chandelier" loading="lazy">
-                <img src="../images/lujo-3.jpg" alt="Terraza privada en la Suite Lujo con vistas exclusivas" loading="lazy">
-            </div>
-
-            <div class="room-description">
-                <h3>Descripción</h3>
-                <p>La Suite Lujo representa la excelencia en hospitalidad, con 70 m² de espacio opulento que incluye sala de estar separada, terraza privada y decoración de alta gama. Diseñada para huéspedes que buscan indulgencia y servicio personalizado.</p>
-
-                <h3>Amenidades</h3>
-                <ul class="amenities-list">
-                    <li>Cama king size con sábanas de seda</li>
-                    <li>Baño de mármol con bañera de hidromasaje</li>
-                    <li>Terraza privada con jacuzzi</li>
-                    <li>Wi-Fi premium y sistema de sonido Bose</li>
-                    <li>Mini-bar gourmet y cava de vinos</li>
-                    <li>TV OLED 65" con streaming</li>
-                    <li>Conserje personal 24h</li>
-                    <li>Desayuno en suite y cena gourmet</li>
-                </ul>
-
-                <h3>Capacidad y Precio</h3>
-                <p>Máximo 3 adultos. Precio base: USD $450 por noche. Incluye servicios VIP como lavandería express y traslados privados.</p>
-            </div>
-        </section>
-
-        <section class="room-location">
-            <h3>Ubicación en el Hotel</h3>
-            <p>En la torre exclusiva del hotel, con vistas panorámicas y acceso prioritario a todas las amenidades.</p>
-            <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
-            <p> <img src="../Images/mapainteractivo.323Z.png" alt="Vista general de la Habitación Deluxe con cama king size y decoración elegante" loading="lazy"></p>
-            </div>
-        </section>
-
-        <section class="cta-section" aria-labelledby="cta-title">
-            <h3 id="cta-title">Reserva tu Estancia</h3>
-            <p>Experiencia de lujo incomparable. Consulta disponibilidad para fechas premium.</p>
-            <form class="quick-reserve" aria-label="Formulario rápido de reserva">
-                <label for="checkin">Fecha de entrada:</label>
-                <input type="date" id="checkin" name="checkin" required>
-                <label for="checkout">Fecha de salida:</label>
-                <input type="date" id="checkout" name="checkout" required>
-                <label for="guests">Número de huéspedes:</label>
-                <select id="guests" name="guests">
-                    <option value="1">1 adulto</option>
-                    <option value="2">2 adultos</option>
-                    <option value="3">3 adultos</option>
-                </select>
-                <button type="submit" class="btn-reserve">Solicitar Reserva</button>
-            </form>
-            <a href="../reservation/reservations.html" class="btn-full-reserve">Reservar Completa</a>
-        </section>
-
-    <footer>
-        <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados</p>
-        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
-         <div class="social-links">
-            <a href="https://facebook.com">Facebook</a> |
-            <a href="https://instagram.com">Instagram</a> |
-            <a href="https://twitter.com">Twitter</a>
+  <div id="nav"></div>
+  <main class="container section" role="main" aria-labelledby="lujo-title">
+    <h1 class="h2" id="lujo-title">Suite de Lujo</h1>
+    <p>Elegancia y exclusividad en una suite diseñada para los viajeros más exigentes.</p>
+    <div class="grid cols-1">
+      <article class="card">
+        <img src="/Images/suite.jpg" alt="Suite de Lujo">
+        <div class="pad">
+          <h3>Suite de Lujo</h3>
+          <p class="muted">USD $500/noche | ★★★★☆ (4.4/5)</p>
+          <p>Suite premium con detalles de lujo, ideal para una experiencia sofisticada.</p>
+          <ul class="amenities">
+            <li>Cama king-size</li>
+            <li>Sala de estar privada</li>
+            <li>Baño con jacuzzi</li>
+            <li>Minibar premium</li>
+            <li>Wi-Fi de alta velocidad</li>
+          </ul>
+          <div class="card-actions">
+                    <a href="/pages/mis-reservas.html" class="btn-details">Reservar ahora</a>
+            <span class="availability reservada">Reservada</span>
+          </div>
         </div>
-        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
-    </footer>
+      </article>
+    </div>
+  </main>
 
+
+
+
+    </div>
+  </main>
+  <div id="foot"></div>
+  <script src="/assets/js/core.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/servicios.js"></script>
 
 </body>
 </html>
+                

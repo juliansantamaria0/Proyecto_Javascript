@@ -1,153 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Habitación Deluxe — Hotel El Rincón del Carmen</title>
-  <meta name="description" content="Descubre la Habitación Deluxe en el Hotel El Rincón del Carmen: lujo, comodidad y vistas panorámicas por USD $250/noche. Reserva ahora." />
-  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
-
-  <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-
-  <!-- Tus estilos globales + estilos de detalle de habitaciones -->
-  <link rel="stylesheet" href="../styles.css" />
+  <title>Servicios — Rincón del Carmen</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
   <link rel="stylesheet" href="../Habitaciones/habitaciones.css" />
+  
 </head>
 <body>
-  <!-- ====== NAVBAR (sticky) ====== -->
-  <header role="banner">
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
-        <li><a href="../servicios/services.html">Servicios</a></li>
-        <li><a href="../reservation/reservations.html">Reservas</a></li>
-        <li><a href="../contactos/contactos.html">Contacto</a></li>
-        <li><a href="../historia/historia.html">Historia</a></li>
-        <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="container" role="main" aria-labelledby="room-hero-title">
-    <!-- ====== HERO ====== -->
-    <section class="hero-section room-hero" aria-labelledby="room-hero-title">
-      <div class="hero-content">
-        <h1 id="room-hero-title">Habitación Deluxe</h1>
-        <p class="room-rating">★★★★★ (4.9/5) — USD $250/noche</p>
-        <!-- Cambia a .stock si está disponible -->
-        <span class="availability reservada" aria-label="Esta habitación está actualmente reservada">Reservada</span>
-      </div>
-    </section>
-
-    <!-- ====== GALERÍA + DESCRIPCIÓN ====== -->
-    <section class="room-content" aria-label="Detalles de la Habitación Deluxe">
-      <div class="room-gallery">
-        <!-- Nota: Rutas corregidas a ../Images (con I mayúscula) -->
-        <img src="../Images/deluxe-1.jpg" alt="Vista general de la Habitación Deluxe con cama king size y decoración elegante" loading="lazy" />
-        <img src="../Images/deluxe-2.jpg" alt="Baño de lujo con jacuzzi y amenities premium en la Habitación Deluxe" loading="lazy" />
-        <img src="../Images/deluxe-3.jpg" alt="Vista panorámica desde la ventana de la Habitación Deluxe al jardín del hotel" loading="lazy" />
-      </div>
-
-      <div class="room-description">
-        <h2>Descripción</h2>
-        <p>
-          Disfruta del máximo lujo con nuestra Habitación Deluxe, diseñada para viajeros exigentes que buscan comodidad y elegancia.
-          Esta habitación de 45&nbsp;m² cuenta con cama king size con sábanas de algodón egipcio, baño privado con jacuzzi y
-          ducha de lluvia, y vistas impresionantes al jardín tropical. Perfecta para escapadas románticas o estancias de negocios.
-        </p>
-
-        <h3>Amenidades</h3>
-        <ul class="amenities-list">
-          <li>Cama king size con almohadas premium</li>
-          <li>Baño privado con jacuzzi y productos de baño de lujo</li>
-          <li>Vista al jardín o piscina</li>
-          <li>Wi-Fi de alta velocidad gratis</li>
-          <li>Aire acondicionado y minibar surtido</li>
-          <li>TV de pantalla plana con canales internacionales</li>
-          <li>Servicio de habitaciones 24 horas</li>
-          <li>Desayuno buffet incluido</li>
-        </ul>
-
-        <h3>Capacidad y precio</h3>
-        <p>
-          Máximo 2 adultos (o 1 adulto + 2 niños). Precio base: <strong>USD $250/noche</strong>.
-          Tarifas especiales para estancias largas o paquetes románticos disponibles.
-        </p>
-      </div>
-    </section>
-
-    <!-- ====== UBICACIÓN ====== -->
-    <section class="room-location" aria-labelledby="location-title">
-      <h2 id="location-title">Ubicación en el hotel</h2>
-      <p>
-        Esta habitación se encuentra en el ala principal del hotel, con fácil acceso a la piscina y al restaurante.
-        Disfruta de la tranquilidad rodeada de naturaleza.
-      </p>
-      <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
-        <img src="../Images/mapainteractivo.323Z.png" alt="Mapa del hotel con localización de la Habitación Deluxe" loading="lazy" />
-      </div>
-    </section>
-
-    <!-- ====== CTA RESERVA RÁPIDA ====== -->
-    <section class="cta-section" aria-labelledby="cta-title">
-      <h2 id="cta-title">Reserva tu estancia</h2>
-      <p class="muted">
-        ¿Interesado en esta habitación? Completa el formulario para una cotización personalizada
-        o reserva directamente.
-      </p>
-
-      <form class="quick-reserve" aria-label="Formulario rápido de reserva" onsubmit="return false;">
-        <div>
-          <label for="checkin">Fecha de entrada</label>
-          <input type="date" id="checkin" name="checkin" required />
+  <div id="nav"></div>
+<main class="container section" role="main" aria-labelledby="deluxe-title">
+    <h1 class="h2" id="deluxe-title">Habitación Deluxe</h1>
+    <p>Experimenta el lujo con una vista espectacular al mar, diseñada para ofrecer confort y exclusividad.</p>
+    <div class="grid cols-1">
+      <article class="card">
+        <img src="/Images/deluxe.jpg" alt="Habitación Deluxe con vista al mar">
+        <div class="pad">
+          <h3>Habitación Deluxe</h3>
+          <p class="muted">USD $250/noche | ★★★★★ (4.9/5)</p>
+          <p>Disfruta de una habitación espaciosa con cama king-size, balcón privado con vista al mar, y amenidades de lujo. Ideal para escapadas románticas o viajes de relajación.</p>
+          <ul class="amenities">
+            <li>Cama king-size</li>
+            <li>Balcón con vista al mar</li>
+            <li>Baño con ducha de hidromasaje</li>
+            <li>Minibar incluido</li>
+            <li>Wi-Fi de alta velocidad</li>
+          </ul>
+          <div class="card-actions">
+            <a href="/pages/mis-reservas.html" class="btn-details">Reservar ahora</a>
+            <span class="availability reservada">Reservada</span>
+          </div>
         </div>
-        <div>
-          <label for="checkout">Fecha de salida</label>
-          <input type="date" id="checkout" name="checkout" required />
-        </div>
-        <div>
-          <label for="guests">Número de huéspedes</label>
-          <select id="guests" name="guests" aria-label="Selecciona el número de huéspedes">
-            <option value="1">1 adulto</option>
-            <option value="2" selected>2 adultos</option>
-          </select>
-        </div>
-        <button type="submit" class="btn-reserve" aria-label="Solicitar reserva de Habitación Deluxe">Solicitar reserva</button>
-      </form>
-
-      <a href="../reservation/reservations.html" class="btn-full-reserve" aria-label="Ir a reservas para completar la reserva">Reservar completa</a>
-    </section>
+      </article>
+    </div>
   </main>
 
-  <!-- ====== FOOTER ====== -->
-  <footer role="contentinfo">
-    <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados.</p>
-    <p>Contáctanos: <a href="../contactos/contactos.html">Formulario de contacto</a></p>
-    <div class="social-links">
-      <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> |
-      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> |
-      <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
     </div>
-    <p>Desarrollado por: <a href="https://github.com/juliansantamaria0" target="_blank" rel="noopener">juliansantamaria</a></p>
-  </footer>
+  </main>
+  <div id="foot"></div>
+  <script src="/assets/js/core.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/servicios.js"></script>
 
-  <!-- (Opcional) Si usas la simulación LocalStorage (HotelCore), puedes activar disponibilidad real aquí
-  <script src="/assets/js/core.js" defer></script>
-  <script>
-    // Ejemplo: marcar Disponible/Reservada según fechas por defecto (hoy->mañana) y capacidad 2
-    // if (window.HotelCore) {
-    //   const checkIn = new Date(); const checkOut = new Date(Date.now() + 86400000);
-    //   const ymd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-    //   const avail = HotelCore.Reservations.isAvailable('dlx-1', ymd(checkIn), ymd(checkOut));
-    //   const badge = document.querySelector('.availability');
-    //   if (badge) {
-    //     if (avail) { badge.textContent = 'Disponible'; badge.classList.remove('reservada'); badge.classList.add('stock'); }
-    //     else { badge.textContent = 'Reservada'; badge.classList.remove('stock'); badge.classList.add('reservada'); }
-    //   }
-    // }
-  </script>
-  -->
 </body>
 </html>

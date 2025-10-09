@@ -1,104 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suite Ejecutiva - Hotel El Rincón del Carmen</title>
-    <meta name="description" content="Suite Ejecutiva premium en el Hotel El Rincón del Carmen: espacio amplio, balcón y servicios exclusivos por USD $350/noche. Reserva ya.">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../Habitaciones/habitaciones.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios — Rincón del Carmen</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="../Habitaciones/habitaciones.css" />
+  
 </head>
 <body>
-     <header>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
-                    <li><a href="../servicios/services.html">Servicios</a></li>
-                    <li><a href="../reservation/reservations.html">Reservas</a></li>
-                    <li><a href="../contactos/contactos.html">Contacto</a></li>
-                    <li><a href="../historia/historia.html">Historia</a></li>
-                    <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section class="hero-section room-hero" aria-labelledby="room-hero-title">
-            <div class="hero-content">
-                <h2 id="room-hero-title">Suite Ejecutiva</h2>
-                <p class="room-rating">★★★★★ (4.8/5) - USD $350/noche</p>
-                <span class="availability reservada" aria-label="Esta habitación está actualmente reservada">Reservada</span>
-            </div>
-        </section>
-
-        <section class="room-content" aria-label="Detalles de la Suite Ejecutiva">
-            <div class="room-gallery">
-                <img src="../images/suite-1.jpg" alt="Sala de estar en la Suite Ejecutiva con sofá y mesa de trabajo" loading="lazy">
-                <img src="../images/suite-2.jpg" alt="Dormitorio principal de la Suite Ejecutiva con cama king y balcón" loading="lazy">
-                <img src="../images/suite-3.jpg" alt="Balcón privado en la Suite Ejecutiva con vista al paisaje" loading="lazy">
-            </div>
-
-            <div class="room-description">
-                <h3>Descripción</h3>
-                <p>La Suite Ejecutiva es la opción premium para ejecutivos y familias que desean espacio y privacidad. Con 60 m², incluye dormitorio separado, sala de estar, balcón privado y baño completo. Disfruta de servicios exclusivos como check-in prioritario y acceso al lounge.</p>
-
-                <h3>Amenidades</h3>
-                <ul class="amenities-list">
-                    <li>2 habitaciones (dormitorio + sala)</li>
-                    <li>Balcón privado con vistas</li>
-                    <li>Baño completo con bañera</li>
-                    <li>Mini-bar y cafetera</li>
-                    <li>Wi-Fi ultra-rápido</li>
-                    <li>Estación de trabajo</li>
-                    <li>TV inteligente 55"</li>
-                    <li>Servicio de habitaciones 24h y desayuno en suite</li>
-                </ul>
-
-                <h3>Capacidad y Precio</h3>
-                <p>Máximo 3 adultos o 2 adultos + 2 niños. Precio base: USD $350 por noche. Incluye upgrades como traslados aeropuerto.</p>
-            </div>
-        </section>
-
-        <section class="room-location">
-            <h3>Ubicación en el Hotel</h3>
-            <p>Situada en el piso superior para máxima privacidad y vistas, cerca del spa y restaurante gourmet.</p>
-            <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
-              <p> <img src="../Images/mapainteractivo.323Z.png" alt="Vista general de la Habitación Deluxe con cama king size y decoración elegante" loading="lazy"></p>
-            </div>
-        </section>
-
-        <section class="cta-section" aria-labelledby="cta-title">
-            <h3 id="cta-title">Reserva tu Estancia</h3>
-            <p>Consulta disponibilidad para fechas específicas y personaliza tu reserva.</p>
-            <form class="quick-reserve" aria-label="Formulario rápido de reserva">
-                <label for="checkin">Fecha de entrada:</label>
-                <input type="date" id="checkin" name="checkin" required>
-                <label for="checkout">Fecha de salida:</label>
-                <input type="date" id="checkout" name="checkout" required>
-                <label for="guests">Número de huéspedes:</label>
-                <select id="guests" name="guests">
-                    <option value="1">1 adulto</option>
-                    <option value="2">2 adultos</option>
-                    <option value="3">3 adultos o 2 adultos + 2 niños</option>
-                </select>
-                <button type="submit" class="btn-reserve">Solicitar Reserva</button>
-            </form>
-            <a href="../reservation/reservations.html" class="btn-full-reserve">Reservar Completa</a>
-        </section>
-
-    <footer>
-        <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados</p>
-        <p>Contactanos: <a href="../contactos/contactos.html">Contacto</a></p>
-         <div class="social-links">
-            <a href="https://facebook.com">Facebook</a> |
-            <a href="https://instagram.com">Instagram</a> |
-            <a href="https://twitter.com">Twitter</a>
+  <div id="nav"></div>
+  <main class="container section" role="main" aria-labelledby="ejecutiva-title">
+    <h1 class="h2" id="ejecutiva-title">Suite Ejecutiva</h1>
+    <p>Lujo y funcionalidad para viajeros de negocios o escapadas especiales.</p>
+    <div class="grid cols-1">
+      <article class="card">
+        <img src="/Images/jacuzzi.jpg" alt="Suite Ejecutiva con jacuzzi">
+        <div class="pad">
+          <h3>Suite Ejecutiva</h3>
+          <p class="muted">USD $400/noche | ★★★☆☆ (3.0/5)</p>
+          <p>Espaciosa suite con jacuzzi privado, área de trabajo, y vistas panorámicas, ideal para combinar trabajo y relajación.</p>
+          <ul class="amenities">
+            <li>Cama king-size</li>
+            <li>Jacuzzi privado</li>
+            <li>Área de trabajo</li>
+            <li>Minibar premium</li>
+            <li>Wi-Fi de alta velocidad</li>
+          </ul>
+          <div class="card-actions">
+            <a href="/pages/mis-reservas.html" class="btn-details">Reservar ahora</a>
+            <span class="availability stock">Disponible</span>
+          </div>
         </div>
-        <p>Desarrollado por: <a href="https://github.com/juliansantamaria0">juliansantamaria</a></p>
-    </footer>
+      </article>
+    </div>
+  </main>
 
+    </div>
+  </main>
+  <div id="foot"></div>
+  <script src="/assets/js/core.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/servicios.js"></script>
 
 </body>
 </html>

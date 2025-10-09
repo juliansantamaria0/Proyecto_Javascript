@@ -1,149 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Habitación Estándar — Hotel El Rincón del Carmen</title>
-  <meta name="description" content="Habitación Estándar cómoda y asequible en el Hotel El Rincón del Carmen: ideal para familias o viajes de placer por USD $150/noche. Reserva hoy." />
-  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
-
-  <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-
-  <!-- Estilos -->
-  <link rel="stylesheet" href="../styles.css" />
+  <title>Servicios — Rincón del Carmen</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
   <link rel="stylesheet" href="../Habitaciones/habitaciones.css" />
 </head>
 <body>
-  <!-- ====== NAVBAR (sticky) ====== -->
-  <header role="banner">
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../Habitaciones/rooms.html" aria-current="page">Habitaciones</a></li>
-        <li><a href="../servicios/services.html">Servicios</a></li>
-        <li><a href="../reservation/reservations.html">Reservas</a></li>
-        <li><a href="../contactos/contactos.html">Contacto</a></li>
-        <li><a href="../historia/historia.html">Historia</a></li>
-        <li><a href="../Patrocinadores/patrocinadores.html">Patrocinadores</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="container" role="main" aria-labelledby="room-hero-title">
-    <!-- ====== HERO ====== -->
-    <section class="hero-section room-hero" aria-labelledby="room-hero-title">
-      <div class="hero-content">
-        <h1 id="room-hero-title">Habitación Estándar</h1>
-        <p class="room-rating">★★★★☆ (4.5/5) — USD $150/noche</p>
-        <!-- Usa .stock para disponible, .reservada para no disponible -->
-        <span class="availability stock" aria-label="Esta habitación está disponible">Disponible</span>
-      </div>
-    </section>
-
-    <!-- ====== GALERÍA + DESCRIPCIÓN ====== -->
-    <section class="room-content" aria-label="Detalles de la Habitación Estándar">
-      <div class="room-gallery">
-        <!-- Rutas corregidas a ../Images/... -->
-        <img src="../Images/estandar-1.jpg" alt="Habitación Estándar con cama queen y decoración acogedora" loading="lazy" />
-        <img src="../Images/estandar-2.jpg" alt="Baño de la Habitación Estándar con ducha y toallas frescas" loading="lazy" />
-        <img src="../Images/estandar-3.jpg" alt="Área de descanso de la Habitación Estándar cercana a la piscina" loading="lazy" />
-      </div>
-
-      <div class="room-description">
-        <h2>Descripción</h2>
-        <p>
-          Nuestra Habitación Estándar ofrece un equilibrio perfecto entre comodidad y precio accesible. Con 30&nbsp;m²,
-          incluye cama queen size, baño privado y acceso directo a las áreas comunes del hotel. Ideal para familias o
-          viajeros que buscan una base cómoda para explorar la zona.
-        </p>
-
-        <h3>Amenidades</h3>
-        <ul class="amenities-list">
-          <li>Cama queen size</li>
-          <li>Baño privado con ducha</li>
-          <li>Acceso a piscina y jardín</li>
-          <li>Wi-Fi gratis</li>
-          <li>Aire acondicionado</li>
-          <li>TV con canales locales</li>
-          <li>Desayuno incluido</li>
-          <li>Estacionamiento gratuito</li>
-        </ul>
-
-        <h3>Capacidad y precio</h3>
-        <p>
-          Máximo 2 adultos + 1 niño. Precio base: <strong>USD $150/noche</strong>.
-          Ofertas disponibles para reservas anticipadas.
-        </p>
-      </div>
-    </section>
-
-    <!-- ====== UBICACIÓN ====== -->
-    <section class="room-location" aria-labelledby="location-title">
-      <h2 id="location-title">Ubicación en el hotel</h2>
-      <p>
-        Ubicada en el ala este, cerca de la entrada principal y de la piscina, para una estancia conveniente.
-      </p>
-      <div class="map-placeholder" aria-label="Mapa de ubicación de la habitación en el hotel">
-        <img src="../Images/mapainteractivo.323Z.png" alt="Mapa del hotel señalando el ala este donde se ubica la Habitación Estándar" loading="lazy" />
-      </div>
-    </section>
-
-    <!-- ====== CTA RESERVA ====== -->
-    <section class="cta-section" aria-labelledby="cta-title">
-      <h2 id="cta-title">Reserva tu estancia</h2>
-      <p class="muted">Disponible ahora. Reserva fácilmente con nuestro formulario rápido.</p>
-
-      <form class="quick-reserve" aria-label="Formulario rápido de reserva" onsubmit="return false;">
-        <div>
-          <label for="checkin">Fecha de entrada</label>
-          <input type="date" id="checkin" name="checkin" required />
+  <div id="nav"></div>
+<main class="container section" role="main" aria-labelledby="estandar-title">
+    <h1 class="h2" id="estandar-title">Habitación Estándar</h1>
+    <p>Confort y funcionalidad para una estancia práctica y agradable.</p>
+    <div class="grid cols-1">
+      <article class="card">
+        <img src="/Images/estandar.jpg" alt="Habitación Estándar cómoda">
+        <div class="pad">
+          <h3>Habitación Estándar</h3>
+          <p class="muted">USD $150/noche | ★★★★☆ (4.7/5)</p>
+          <p>Una habitación acogedora con todas las comodidades esenciales, perfecta para viajeros que buscan calidad a un precio accesible.</p>
+          <ul class="amenities">
+            <li>Cama queen-size</li>
+            <li>Baño privado</li>
+            <li>TV de pantalla plana</li>
+            <li>Wi-Fi gratuito</li>
+            <li>Escritorio de trabajo</li>
+          </ul>
+          <div class="card-actions">
+            <a href="/pages/mis-reservas.html" class="btn-details">Reservar ahora</a>
+            <span class="availability stock">Disponible</span>
+          </div>
         </div>
-        <div>
-          <label for="checkout">Fecha de salida</label>
-          <input type="date" id="checkout" name="checkout" required />
-        </div>
-        <div>
-          <label for="guests">Número de huéspedes</label>
-          <select id="guests" name="guests" aria-label="Selecciona el número de huéspedes">
-            <option value="1">1 adulto</option>
-            <option value="3" selected>2 adultos + 1 niño</option>
-          </select>
-        </div>
-        <button type="submit" class="btn-reserve" aria-label="Solicitar reserva de Habitación Estándar">Solicitar reserva</button>
-      </form>
-
-      <a href="../reservation/reservations.html" class="btn-full-reserve" aria-label="Ir a reservas para completar la reserva">Reservar completa</a>
-    </section>
+      </article>
+    </div>
   </main>
 
-  <!-- ====== FOOTER ====== -->
-  <footer role="contentinfo">
-    <p>&copy; 2025 Hotel El Rincón del Carmen. Todos los derechos reservados.</p>
-    <p>Contáctanos: <a href="../contactos/contactos.html">Formulario de contacto</a></p>
-    <div class="social-links">
-      <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> |
-      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> |
-      <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
-    </div>
-    <p>Desarrollado por: <a href="https://github.com/juliansantamaria0" target="_blank" rel="noopener">juliansantamaria</a></p>
-  </footer>
 
-  <!-- (Opcional) Conexión a disponibilidad real con LocalStorage (si usas HotelCore)
-  <script src="/assets/js/core.js" defer></script>
-  <script>
-    // if (window.HotelCore) {
-    //   const checkIn = new Date();
-    //   const checkOut = new Date(Date.now() + 86400000);
-    //   const ymd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-    //   const avail = HotelCore.Reservations.isAvailable('std-1', ymd(checkIn), ymd(checkOut));
-    //   const badge = document.querySelector('.availability');
-    //   if (badge) {
-    //     if (avail) { badge.textContent = 'Disponible'; badge.classList.remove('reservada'); badge.classList.add('stock'); }
-    //     else { badge.textContent = 'Reservada'; badge.classList.remove('stock'); badge.classList.add('reservada'); }
-    //   }
-    // }
-  </script>
-  -->
+    </div>
+  </main>
+  <div id="foot"></div>
+  <script src="/assets/js/core.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/servicios.js"></script>
+
 </body>
 </html>
+
