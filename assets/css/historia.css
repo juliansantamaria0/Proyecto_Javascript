@@ -1,0 +1,114 @@
+/* main.css - Estilos para la sección de galería histórica en historia.html */
+
+/* Sección de galería */
+.section#gallery {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+/* Títulos */
+.section#gallery .h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Párrafo introductorio */
+.section#gallery p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid para la galería */
+.section#gallery .grid.cols-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjetas de la galería */
+.section#gallery .card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section#gallery .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section#gallery .card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Grid irregular: diferentes alturas para algunas tarjetas */
+.section#gallery .grid.cols-3 .card:nth-child(1),
+.section#gallery .grid.cols-3 .card:nth-child(4) {
+  grid-row: span 2;
+}
+
+.section#gallery .grid.cols-3 .card:nth-child(1) img,
+.section#gallery .grid.cols-3 .card:nth-child(4) img {
+  height: 460px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .section#gallery {
+    padding: 20px 0;
+  }
+
+  .section#gallery .h2 {
+    font-size: 2rem;
+  }
+
+  .section#gallery p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .section#gallery .grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .section#gallery .grid.cols-3 .card:nth-child(1),
+  .section#gallery .grid.cols-3 .card:nth-child(4) {
+    grid-row: auto;
+  }
+
+  .section#gallery .grid.cols-3 .card img,
+  .section#gallery .grid.cols-3 .card:nth-child(1) img,
+  .section#gallery .grid.cols-3 .card:nth-child(4) img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section#gallery .h2 {
+    font-size: 1.8rem;
+  }
+
+  .section#gallery p {
+    font-size: 0.9rem;
+  }
+
+  .section#gallery .grid.cols-3 .card img {
+    height: 200px;
+  }
+}

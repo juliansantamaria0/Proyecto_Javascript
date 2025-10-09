@@ -1,0 +1,358 @@
+/* main.css - Estilos para la sección de habitaciones destacadas en la página principal */
+
+/* Sección principal */
+.section {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+/* Títulos */
+.section .h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Grid para tarjetas */
+.section .grid.cols-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjetas (asumiendo contenido dinámico similar a rooms.html) */
+.section #home-rooms .card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section #home-rooms .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section #home-rooms .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.section #home-rooms .pad {
+  padding: 20px;
+  text-align: center;
+}
+
+.section #home-rooms .card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.section #home-rooms .card p.muted {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Acciones de la tarjeta */
+.section #home-rooms .card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.section #home-rooms .btn-details {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #e67e22;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.section #home-rooms .btn-details:hover {
+  background-color: #d35400;
+}
+
+.section #home-rooms .availability {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.section #home-rooms .availability.stock {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.section #home-rooms .availability.reservada {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .section {
+    padding: 20px 0;
+  }
+
+  .section .kicker {
+    font-size: 0.9rem;
+  }
+
+  .section .h2 {
+    font-size: 2rem;
+  }
+
+  .section .grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .section #home-rooms .card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section .kicker {
+    font-size: 0.8rem;
+  }
+
+  .section .h2 {
+    font-size: 1.8rem;
+  }
+
+  .section #home-rooms .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .section #home-rooms .card p.muted {
+    font-size: 0.9rem;
+  }
+
+  .section #home-rooms .btn-details {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .section #home-rooms .availability {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .section #home-rooms .card img {
+    height: 160px;
+  }
+}
+
+
+/* main.css - Estilos para la sección de testimonios */
+
+/* Sección de testimonios */
+.testimonials {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+/* Títulos */
+.testimonials h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Grid para testimonios */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Elementos de testimonio */
+.testimonial-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-item p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.testimonial-item p strong {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 20px 0;
+  }
+
+  .testimonials h2 {
+    font-size: 2rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  .testimonial-item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials h2 {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-item p {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-item p strong {
+    font-size: 0.8rem;
+  }
+}
+
+/* main.css - Estilos para la sección de servicios destacados */
+
+/* Sección de servicios */
+.services {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+/* Títulos */
+.services h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Grid para servicios */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Elementos de servicio */
+.service-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .services {
+    padding: 20px 0;
+  }
+
+  .services h2 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    padding: 0 15px;
+  }
+
+  .service-item {
+    padding: 15px;
+  }
+
+  .service-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services h2 {
+    font-size: 1.8rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item p {
+    font-size: 0.9rem;
+  }
+
+  .service-item img {
+    width: 45px;
+    height: 45px;
+  }
+}

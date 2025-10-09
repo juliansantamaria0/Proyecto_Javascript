@@ -1,8 +1,9 @@
-    // Render nav + footer
+
+// Renderizar navegación + pie de página
     document.getElementById('nav').innerHTML = UI.navbar();
     document.getElementById('foot').innerHTML = UI.footer();
 
-    // Render a few rooms from DB
+// Renderizar algunas habitaciones desde la base de datos
     const root = document.getElementById('home-rooms');
     HotelCore.Rooms.list().slice(0,6).forEach(r=>{
       root.insertAdjacentHTML('beforeend', `

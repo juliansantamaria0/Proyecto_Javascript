@@ -1,23 +1,23 @@
 // =====================================================
-// Hotel El Rincón del Carmen — Core Storage & Models
-// All data persisted in localStorage (simulation only)
+// Hotel El Rincón del Carmen — Núcleo de Almacenamiento y Modelos
+// Todos los datos se guardan en localStorage (solo simulación)
 // =====================================================
 
 /**
- * LINE-BY-LINE DOCS:
- * 1. Small helpers around JSON/localStorage to avoid try/catch at call sites.
- * 2. Model factories for users, rooms, reservations.
- * 3. Business rules:
- *    - Only ADMIN can cancel/modify reservations.
- *    - No date overlap per room.
- *    - Assign rooms that match capacity and filters.
- * 4. Seed initial demo data (first-run only).
+ * DOCUMENTACIÓN LÍNEA POR LÍNEA:
+ * 1. Pequeños ayudantes para manejar JSON/localStorage sin usar try/catch en cada llamada.
+ * 2. Fábricas de modelos para usuarios, habitaciones y reservas.
+ * 3. Reglas de negocio:
+ *    - Solo el ADMIN puede cancelar o modificar reservas.
+ *    - No se permiten reservas superpuestas por habitación.
+ *    - Asignar habitaciones que coincidan con la capacidad y los filtros.
+ * 4. Carga de datos de demostración (solo la primera ejecución).
  */
 
-// --- 1) Storage helpers ---
+// --- 1) Ayudantes de almacenamiento ---
 const LS = {
   get(key, fallback) {
-    // read JSON or return fallback
+    // leer JSON o devolver valor por defecto
     const raw = localStorage.getItem(key);
     if (!raw) return fallback;
     try { return JSON.parse(raw); } catch { return fallback; }
@@ -27,7 +27,7 @@ const LS = {
   }
 };
 
-// --- 2) Model factories ---
+// --- 2) Fábricas de modelos ---
 const nowIso = () => new Date().toISOString();
 
 function makeUser({ id, name, nation, email, phone, password, role = 'USER' }) {
@@ -42,7 +42,7 @@ function makeReservation({ id, roomId, userId, checkIn, checkOut, people, total,
   return { id, roomId, userId, checkIn, checkOut, people, total, status, createdAt: nowIso() };
 }
 
-// --- 3) DB accessors ---
+// --- 3) Accesores de base de datos ---
 const DB = {
   users: () => LS.get('users', []),
   rooms: () => LS.get('rooms', []),
@@ -55,7 +55,7 @@ const DB = {
   saveSession(s) { LS.set('session', s); },
 };
 
-// --- 4) Auth API ---
+// --- 4) API de autenticación ---
 const Auth = {
   register(payload) {
     const users = DB.users();
@@ -84,11 +84,11 @@ const Auth = {
   }
 };
 
-// --- 5) Room API ---
+// --- 5) API de habitaciones ---
 const Rooms = {
   list(filters = {}) {
     const all = DB.rooms();
-    // Filter by capacity and feature tags
+    // Filtrar por capacidad y características
     return all.filter(r => {
       const okPeople = filters.people ? r.maxPeople >= Number(filters.people) : true;
       const okFeatures = filters.features && filters.features.length
@@ -98,7 +98,7 @@ const Rooms = {
     });
   },
   upsert(room, actor) {
-    // Only ADMIN
+    // Solo ADMIN
     if (!actor || actor.role !== 'ADMIN') throw new Error('Solo el administrador puede gestionar habitaciones.');
     const list = DB.rooms();
     const idx = list.findIndex(r => r.id === room.id);
@@ -113,20 +113,20 @@ const Rooms = {
   }
 };
 
-// --- 6) Date helpers ---
-const parseDate = s => new Date(s + 'T12:00:00'); // fix TZ
+// --- 6) Ayudantes de fecha ---
+const parseDate = s => new Date(s + 'T12:00:00'); // corregir zona horaria
 const nightsBetween = (a, b) => Math.max(1, Math.round((parseDate(b) - parseDate(a)) / 86_400_000));
 
 function overlap(aStart, aEnd, bStart, bEnd) {
-  // Two ranges overlap if start < otherEnd && otherStart < end
+  // Dos rangos se superponen si inicio < otroFin && otroInicio < fin
   return parseDate(aStart) < parseDate(bEnd) && parseDate(bStart) < parseDate(aEnd);
 }
 
-// --- 7) Reservations API ---
+// --- 7) API de reservas ---
 const Reservations = {
   computeTotal(room, checkIn, checkOut, people) {
     const nights = nightsBetween(checkIn, checkOut);
-    return nights * room.priceNight; // flat price per room/night
+    return nights * room.priceNight; // precio fijo por habitación/noche
   },
 
   isAvailable(roomId, checkIn, checkOut) {
@@ -135,13 +135,13 @@ const Reservations = {
   },
 
   create({ roomId, userId, checkIn, checkOut, people }) {
-    // Verify availability in real-time
+    // Verificar disponibilidad en tiempo real
     if (!this.isAvailable(roomId, checkIn, checkOut)) {
       throw new Error('La habitación ya no está disponible para ese rango de fechas.');
     }
     const room = DB.rooms().find(r => r.id === roomId);
     if (!room) throw new Error('Habitación no encontrada.');
-    if (people > room.maxPeople) throw new Error('Personas supera la capacidad de la habitación.');
+    if (people > room.maxPeople) throw new Error('El número de personas supera la capacidad de la habitación.');
 
     const total = this.computeTotal(room, checkIn, checkOut, people);
     const id = crypto.randomUUID();
@@ -152,7 +152,7 @@ const Reservations = {
     return res;
   },
 
-  // Users cannot cancel; only admin can change status or delete
+  // Los usuarios no pueden cancelar; solo el administrador puede cambiar estado o eliminar
   cancel(resId, actor) {
     if (!actor || actor.role !== 'ADMIN') throw new Error('Solo el administrador puede cancelar reservas.');
     const list = DB.reservations();
@@ -167,7 +167,7 @@ const Reservations = {
   }
 };
 
-// --- 8) Seed (first run) ---
+// --- 8) Datos iniciales (primera ejecución) ---
 (function seed() {
   if (!localStorage.getItem('seed_v2')) {
     const demoAdmin = makeUser({
@@ -191,5 +191,5 @@ const Reservations = {
   }
 })();
 
-// Expose to window for modules without bundler
+// Exponer al objeto global window para módulos sin empaquetador
 window.HotelCore = { LS, Auth, Rooms, Reservations, DB, nightsBetween };
