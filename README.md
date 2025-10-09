@@ -10,6 +10,9 @@ Julian Santamaria
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+**👁️ Info relevante:**
+si no inicias secion la pagina de admin(admin.html ) no funcionara por eso es importante iniciar sesion
+
 **🌐 Demo en vivo:** [peaceful-snickerdoodle-aa64e3.netlify.app](https://peaceful-snickerdoodle-aa64e3.netlify.app)
 
 ---
@@ -19,6 +22,7 @@ Julian Santamaria
 - [Descripción](#-descripción)
 - [Netlify](#-descripción)
 - [Características](#-características)
+- [Planificación y Wireframes](#-Planificación-y-Wireframes)
 - [Tecnologías](#-tecnologías)
 - [Estructura del Proyecto](#-estructura-del-proyecto)
 - [Instalación](#-instalación)
@@ -62,7 +66,54 @@ Sistema web moderno tipo **SPA** para gestión integral de hotel. Implementa res
 | ⚡ **Sin Backend** | Funciona 100% en el navegador (ideal para demos) |
 
 ---
+## 🧭 Planificación y Wireframes
 
+### 🗓️ Planificación
+
+Durante esta etapa se definieron los objetivos principales, el público al que está dirigido y la estructura del sitio web.  
+El propósito fue organizar el contenido antes de realizar el maquetado en HTML y CSS.
+
+**Objetivos principales:**
+- Mostrar las habitaciones disponibles y sus características.  
+- Permitir a los usuarios registrarse, iniciar sesión y realizar reservas.  
+- Ofrecer un panel de administración para visualizar reservas.  
+
+**Estructura general del sitio:**
+| Página | Descripción |
+|--------|--------------|
+| **index.html** | Página principal con presentación del hotel |
+| **disponibilidad.html** | Consulta de habitaciones disponibles |
+| **contacto.html** | Formulario de contacto |
+| **login.html / register.html** | Autenticación de usuarios |
+| **mis-reservas.html** | Visualización de reservas del usuario |
+| **admin.html** | Panel de administración del hotel |
+
+**Flujo del usuario:**
+Inicio → Ver disponibilidad → Elegir habitación → Iniciar sesión / Registrarse → Confirmar reserva
+
+---
+
+### 🧱 Wireframes
+
+Antes del maquetado se elaboraron wireframes (bocetos visuales) para definir la distribución de los elementos en cada página.
+
+**Herramienta utilizada:** Figma / Canva  
+**Tipo de wireframe:** Media fidelidad (estructura básica sin estilos finales)
+
+**Ejemplos de wireframes:**
+*(Agrega aquí tus imágenes o enlaces)*
+
+![Wireframe de Inicio](./docs/wireframe-inicio.png)
+![Wireframe de Disponibilidad](./docs/wireframe-disponibilidad.png)
+![Wireframe de Login](./docs/wireframe-login.png)
+
+> Los wireframes sirvieron como guía para el maquetado y ayudaron a mantener la coherencia visual en todas las páginas del sitio.
+
+---
+
+## 🏗️ Maquetado
+
+El maquetado se realizó utilizando **HTML5 y CSS3**, organizando las carpetas de la siguiente forma:
 ## 🛠️ Tecnologías
 
 ### Stack Tecnológico
