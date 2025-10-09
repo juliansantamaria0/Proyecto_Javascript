@@ -109,3 +109,70 @@ body { background: var(--bg); color: var(--text); line-height:1.6; }
 .alert { border:1px solid #E6EAF0; background:#FFFFFF; padding:12px 14px; border-radius:12px; color: var(--muted); }
 .alert.ok { border-color:#CFEAD9; background:#F5FBF8; color:#2f6a4f; }
 .alert.err { border-color:#F7D6D9; background:#FFF5F6; color:#8a333b; }
+
+/* Hamburguer Menu Toggle Button */
+.menu-toggle {
+    display: none; /* Oculto por defecto en escritorio */
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    color: var(--text);
+    line-height: 1;
+    order: 2; /* Para colocarlo después del logo */
+    margin-left: 10px; 
+}
+
+/* Hamburguer Menu Drawer */
+.nav-drawer {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 100%; /* Justo debajo del header */
+    left: 0;
+    width: 100%;
+    background: var(--surface);
+    border-top: 1px solid #E6EAF0;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+    z-index: 40; 
+}
+.nav-drawer a {
+    display: block;
+    padding: 10px 4vw; /* Padding cómodo para tocar */
+    color: var(--text);
+}
+.nav-drawer a:hover {
+    background: var(--mint);
+}
+.nav-drawer.open {
+    display: block; /* Muestra el menú al activar la clase */
+}
+
+
+
+/* =====================================================
+   Media Queries (Mobile-First Overrides)
+   ===================================================== */
+@media (max-width: 900px) { 
+    /* Colapsa las grillas y el Hero */
+    .hero { grid-template-columns: 1fr; } 
+    .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; } 
+
+    /* Oculta enlaces de escritorio y muestra menú de hamburguesa */
+    .nav .link:not(.logo) { 
+        display: none !important; /* Oculta todos los enlaces de navegación, excepto el logo */
+    }
+    .nav .menu-toggle {
+        display: block; /* Muestra el botón de hamburguesa */
+    }
+    .nav .badge, .nav .cta, .nav .logout {
+        /* Asegura que los elementos de usuario/CTA sigan visibles */
+        margin-left: 10px;
+        display: inline-flex;
+    }
+} 
+
+@media (max-width: 700px){ 
+    /* Colapsa las filas de formularios */
+    .row { grid-template-columns: 1fr; } 
+}

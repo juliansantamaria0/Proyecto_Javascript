@@ -13,26 +13,58 @@ function ensureAuth(needAdmin=false){
   return me;
 }
 
+// La función ahora solo genera la estructura base
 function navbar(){
-  const me = HotelCore.Auth.me();
-  return `
-  <div class="header">
-    <div class="container nav">
-      <a class="logo link" href="/index.html">Rincón del Carmen</a>
-      <div class="grow"></div>
-      <a class="link" href="/index.html">Inicio</a>
-      <a class="link" href="/pages/disponibilidad.html">Disponibilidad</a>
-      <a class="link" href="/pages/servicios.html">Servicios</a>
-      <a class="link" href="/Habitaciones/rooms.html">Habitaciones</a>
-      <a class="link" href="/pages/historia.html">Historia</a>
-      <a class="link" href="/pages/patrocinadores.html">Patrocinadores</a>
-      <a class="link" href="/pages/contacto.html">Contacto</a>
-      <a class="link" href="/pages/mis-reservas.html">Mis reservas</a>
-      <a class="link" href="/pages/admin.html">Admin</a>
-      ${ me ? `<span class="badge"><span class="dot"></span>${me.name}</span> <button class="logout" id="btnLogout">Salir</button>` : `<a class="cta" href="/pages/login.html">Ingresar</a>`}
+  const me = HotelCore.Auth.me();
+  return `
+  <div class="header">
+    <div class="container nav">
+      <a class="logo link" href="/index.html">Rincón del Carmen</a>
+      
+      <button class="menu-toggle" id="btnMenuToggle">☰</button>
+
+      <div class="grow"></div>
+      
+            <a class="link" href="/index.html">Inicio</a>
+      <a class="link" href="/pages/disponibilidad.html">Disponibilidad</a>
+      <a class="link" href="/pages/servicios.html">Servicios</a>
+      <a class="link" href="/Habitaciones/rooms.html">Habitaciones</a>
+      <a class="link" href="/pages/historia.html">Historia</a>
+      <a class="link" href="/pages/patrocinadores.html">Patrocinadores</a>
+      <a class="link" href="/pages/contacto.html">Contacto</a>
+      <a class="link" href="/pages/mis-reservas.html">Mis reservas</a>
+      <a class="link" href="/pages/admin.html">Admin</a>
+      
+            ${ me ? `<span class="badge"><span class="dot"></span>${me.name}</span> <button class="logout" id="btnLogout">Salir</button>` : `<a class="cta" href="/pages/login.html">Ingresar</a>`}
+    </div>
+
+    <div class="nav-drawer" id="navDrawer">
+        <a href="/index.html">Inicio</a>
+        <a href="/pages/disponibilidad.html">Disponibilidad</a>
+        <a href="/pages/servicios.html">Servicios</a>
+        <a href="/Habitaciones/rooms.html">Habitaciones</a>
+        <a href="/pages/historia.html">Historia</a>
+        <a href="/pages/patrocinadores.html">Patrocinadores</a>
+        <a href="/pages/contacto.html">Contacto</a>
+        <a href="/pages/mis-reservas.html">Mis reservas</a>
+        <a href="/pages/admin.html">Admin</a>
     </div>
-  </div>`;
+  </div>`;
 }
+
+// Lógica de JavaScript para manejar el menú (DEBE EJECUTARSE DESPUÉS DE RENDERIZAR EL NAVBAR)
+document.addEventListener('DOMContentLoaded', () => {
+    const btnToggle = document.getElementById('btnMenuToggle');
+    const navDrawer = document.getElementById('navDrawer');
+
+    if(btnToggle && navDrawer) {
+        btnToggle.addEventListener('click', () => {
+            navDrawer.classList.toggle('open');
+            // Cambiar el ícono: ☰ (Menú) o × (Cerrar)
+            btnToggle.textContent = navDrawer.classList.contains('open') ? '×' : '☰';
+        });
+    }
+});
 
 function footer(){
   return `
