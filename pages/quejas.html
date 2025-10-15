@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quejas/reclamos/opiniones — Rincón del Carmen</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/quejas.css" />
+</head>
+<body>
+
+  <div id="nav"></div>
+
+  <main class="container section">
+    <h1 class="h2">quejas de Nuestros Huéspedes</h1>
+    <p class="muted">Tu experiencia nos ayuda a mejorar cada día.</p>
+
+    <form id="formOpinion" class="card pad" onsubmit="return false;">
+      <div class="row">
+        <div>
+          <label class="label">Nombre</label>
+          <input type="text" id="nombre" class="input" placeholder="Tu nombre" required>
+        </div>
+        <div>
+          <label class="label">Valoración</label>
+          <select id="estrellas" class="select">
+            <option value="5">⭐⭐⭐⭐⭐ (Excelente)</option>
+            <option value="4">⭐⭐⭐⭐ (Muy bueno)</option>
+            <option value="3">⭐⭐⭐ (Bueno)</option>
+            <option value="2">⭐⭐ (Regular)</option>
+            <option value="1">⭐ (Malo)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-full">
+          <label class="label">Comentario</label>
+          <textarea id="comentario" class="input" rows="3" placeholder="Escribe tu opinión..." required></textarea>
+        </div>
+      </div>
+
+      <div class="toolbar" style="margin-top:12px;">
+        <button id="btnEnviar" class="btn" type="button">Enviar Opinión</button>
+        <button id="btnLimpiar" class="btn ghost" type="button">Limpiar</button>
+      </div>
+    </form>
+    <section id="listaOpiniones" style="margin-top:20px;"></section>
+  </main>
+
+  <div id="foot"></div>
+  
+  <script defer src="/assets/js/core.js"></script>
+  <script defer src="/assets/js/ui.js"></script>
+  <script defer src="/assets/js/quejas.js"></script>
+</body>
+</html>

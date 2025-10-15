@@ -27,6 +27,7 @@ function navbar(){
       
             <a class="link" href="/index.html">Inicio</a>
       <a class="link" href="/pages/disponibilidad.html">Disponibilidad</a>
+      <a class="link" href="/pages/quejas.html">quejas</a>
       <a class="link" href="/pages/servicios.html">Servicios</a>
       <a class="link" href="/Habitaciones/rooms.html">Habitaciones</a>
       <a class="link" href="/pages/historia.html">Historia</a>
