@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         guardar();
         renderizar();
       }
+      
     });
   
     // Render inicial
